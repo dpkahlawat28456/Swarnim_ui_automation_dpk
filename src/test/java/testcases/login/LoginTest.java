@@ -40,9 +40,10 @@ public class LoginTest extends BaseFile {
 
 	// This method is calling driver and extent report.
 	@BeforeMethod
-	private void navigateToBaseURL() {
+	private void navigateToBaseURL() throws Exception {
 		driver = BaseFile.driver;
 		loginPage = new LoginPage(driver, 5);
+		loginPage.openURL();
 		extent = extentBase;
 		ScreenshotListener.setDriver(driver);
 
@@ -67,7 +68,7 @@ public class LoginTest extends BaseFile {
 	}
 
 	@Test(dataProvider = "loginPageDataProvider")
-	private void swarnimLoginPage(Map<String, Object> fetchData) {
+	private void swarnimLoginPage(Map<String, Object> fetchData) throws InterruptedException {
 
 		if (fetchData.entrySet() != null) {
 			for (Map.Entry<String, Object> entry : fetchData.entrySet()) {
@@ -92,12 +93,7 @@ public class LoginTest extends BaseFile {
 					e1.printStackTrace();
 				}
 
-				try {
-					loginPage.openURL();
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+
 
 				test = extent.createTest(testScenarioRequest);
 
@@ -108,6 +104,7 @@ public class LoginTest extends BaseFile {
 						loginPage.loginCredential(emailCred);
 						loginPage.passWord(passCred);
 						loginPage.clickloginButton();
+						Thread.sleep(2000);
 						Assert.assertEquals(loginPage.branchElement.isDisplayed(), true);
 						test.log(Status.PASS, "User is able to login successfully: ");
 					}

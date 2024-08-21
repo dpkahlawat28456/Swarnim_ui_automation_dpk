@@ -19,7 +19,7 @@ public class BranchListingPage extends CommonKeyWords {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//*[@id=\"auto-complete\"]\n" + "")
+	@FindBy(xpath = "//*[@id=\"auto-complete\"]")
 	public WebElement branchElement;
 
 	@FindBy(xpath = "//*[@id=\"auto-complete-option-0\"]")
@@ -33,11 +33,21 @@ public class BranchListingPage extends CommonKeyWords {
 
 	@FindBy(xpath = "/html/body/div[1]/div/div[2]/div[2]/div[1]/div[2]")
 	public WebElement createCustomerWebElement;	
+
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[1]")
+	public WebElement createCustomerDashboardIconWebElement;
+	
+	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[2]/button")
+	public WebElement createCustomerButtonWebElement;
+	
+	
 	
 
 			
-	public void selectBranchCode() {
-		click(branchElement);
+	public void selectBranchCode() throws InterruptedException {
+		
+		branchElement.sendKeys("GLB0003");
+		Thread.sleep(1200);
 		click(clickBranchCode);
 		click(submit);
 	}
@@ -46,5 +56,16 @@ public class BranchListingPage extends CommonKeyWords {
 		click(customer360Tab);
 
 	}
+	
+	public void clickcreateCustomerDashboardIconWebElement() {
+		click(createCustomerDashboardIconWebElement);
+
+	}
+	
+	public void clickCreateCustomerButtonWebElement() {
+		click(createCustomerButtonWebElement);
+
+	}	
+	
 
 }
