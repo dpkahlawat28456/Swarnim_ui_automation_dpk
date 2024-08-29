@@ -63,17 +63,19 @@ public class DedupePage extends CommonKeyWords {
 	public WebElement resetbutton;
 	@FindBy(xpath = "/html/body/div/div/div[2]/div[2]/div[2]/form/div[1]/div[5]/div/p")
 	public WebElement panvalidator;
+	@FindBy(xpath = "/html/body/div[1]/div/div[2]/div[2]/div[1]/button")
+	public WebElement createcustomerbtn;
 //	public void openURL() throws Exception {
 //		driver.navigate().to(propReader.getProp().get(PAGE_URL).toString().trim());
 //	}
 
 	public void firstnamefeild(String Firstname) {
 		enterText(firstname, Firstname);
-		//return Firstname;
+		
 	}
 	public void lastnamefeild(String Lastname) {
 		enterText(lastname, Lastname);
-		//return Lastname;
+		
 	}
 
 	public String fathernamefeild(String Fathername) {
@@ -81,7 +83,7 @@ public class DedupePage extends CommonKeyWords {
 		return Fathername;
 	}
 	public void dobButtonclick() throws InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(300);
 		click(dob);
 	}
 	public void yeardroupDownclick() {
@@ -104,4 +106,10 @@ public class DedupePage extends CommonKeyWords {
    public void monthclick() {
 	   click(month);
    }
+   public String gettext(WebElement element) {
+		return getText(element);
+	}
+   public boolean isElementdisplayed(WebElement element) {
+		return isDisplayed(element);
+	}
 }

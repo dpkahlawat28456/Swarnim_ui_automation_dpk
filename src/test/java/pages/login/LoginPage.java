@@ -72,5 +72,11 @@ public class LoginPage extends CommonKeyWords {
 		enterText(Pass, Password);
 		return Password;
 	}
+	public String gettext(WebElement element) {
+		return getText(element);
+	}
+	public boolean isElementdisplayed(WebElement element) {
+		return isDisplayed(element);
+	}
 
 }
