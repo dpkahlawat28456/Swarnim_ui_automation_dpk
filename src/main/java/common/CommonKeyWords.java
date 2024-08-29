@@ -18,7 +18,7 @@ public class CommonKeyWords {
 
 	public CommonKeyWords(WebDriver driver, long timeoutInSeconds) {
 		this.driver = driver;
-		wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 	}
 
 	public void click(WebElement element) {
@@ -49,16 +49,16 @@ public class CommonKeyWords {
 		wait.until(ExpectedConditions.visibilityOf(element)).sendKeys(enter);
 	}
 
-	public void getText(WebElement element, String text) {
-		wait.until(ExpectedConditions.visibilityOf(element)).getText();
+	public String getText(WebElement element) {
+		return wait.until(ExpectedConditions.visibilityOf(element)).getText();
 	}
 
 	public void getList(List<WebElement> elements) {
 		wait.until(ExpectedConditions.visibilityOfAllElements(elements)).toArray();
 	}
 
-	public boolean isDisplayed(By by) {
-		return wait.until(ExpectedConditions.visibilityOfElementLocated(by)).isDisplayed();
+	public boolean isDisplayed(WebElement element) {
+		return wait.until(ExpectedConditions.visibilityOf(element)).isDisplayed();
 	}
 
 	public void navigateTo(String url) {

@@ -1,6 +1,7 @@
 package testcases.customer.dedupe;
 
 
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -8,6 +9,7 @@ import java.util.Map;
 import org.json.simple.JSONObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -45,10 +47,11 @@ public class DedupeTest extends BaseFile {
 	@BeforeMethod
 	private void navigateToBaseURL() {
 		driver = BaseFile.driver;
-		dedupePage = new DedupePage(driver, 15);
+		dedupePage = new DedupePage(driver, 50);
 		extent = extentBase;
 		ScreenshotListener.setDriver(driver);
-
+		//wait=new WebDriverWait(driver, Duration.ofSeconds(50));
+	
 	}
 
 	// This method is used to read from excel.
@@ -73,7 +76,7 @@ public class DedupeTest extends BaseFile {
 	private void swarnimLoginPage(Map<String, Object> fetchData) throws InterruptedException {
 
 		
-		System.out.println("ffffffffffffffffffffffffff" + fetchData.toString());
+		System.out.println(fetchData.toString());
 		if (fetchData.entrySet() != null) {
 			for (Map.Entry<String, Object> entry : fetchData.entrySet()) {
 
@@ -120,21 +123,43 @@ public class DedupeTest extends BaseFile {
     	             int monthval=0;
 				if(!testId.equals("TC_05")) {
 				 monthval=Integer.valueOf(month);}
+				     //Validating the Positive Journey
+				if(testId.equals("TC_01")) {
+					
+						dedupePage.firstnamefeild(firstName);
+						dedupePage.lastnamefeild(lastName);
+						dedupePage.fathernamefeild(fatherName);
+						dedupePage.dobButtonclick();
+						
+						dedupePage.yeardroupDownclick();
+						Thread.sleep(200);
+				      	 
+				      driver.findElement(By.xpath("//button[text()='"+year+"']")).click();
+				      	 Thread.sleep(200);
+				      	 for(int i=1;i<monthval;i++) {
+				      		 dedupePage.monthclick();
+				      		 
+				      	 }
+				      	 Thread.sleep(200);
+				      	 driver.findElement(By.xpath("//button[text()='"+date+"']")).click();
+						dedupePage.panfeild(pan);
+						dedupePage.mobileNumberfeild(mobilenumber);
+						dedupePage.customerDedupeButtonclick();
+						Assert.assertEquals(dedupePage.isElementdisplayed(dedupePage.createcustomerbtn), true);
+						dedupePage.createcustomerbtn.click();
+						test.log(Status.PASS, "Validation the Positive Journey of Customer dedupe");
+						Thread.sleep(1000);
+				}
 
 
 			
 					
-						
+					//Validating the Dedupe if First Name is not present	
 						if(testId.equals("TC_02")) {
-							//dedupePage.firstnamefeild(firstName);
-							dedupePage.firstname.clear();
-							
 							dedupePage.lastnamefeild(lastName);
 							dedupePage.fathernamefeild(fatherName);
 							dedupePage.dobButtonclick();
-							Thread.sleep(500);
-							
-							dedupePage.yeardroupDownclick();
+						    dedupePage.yeardroupDownclick();
 							Thread.sleep(200);
 					      	 
 					      	 driver.findElement(By.xpath("//button[text()='"+year+"']")).click();
@@ -148,75 +173,63 @@ public class DedupeTest extends BaseFile {
 							dedupePage.panfeild(pan);
 							dedupePage.mobileNumberfeild(mobilenumber);
 							dedupePage.customerDedupeButtonclick();
-							Assert.assertEquals(dedupePage.firstnamevalidator.getText().toString(), message);
+							Assert.assertEquals(dedupePage.gettext(dedupePage.firstnamevalidator), message);
 							test.log(Status.PASS, "Validation first name error message when first name is empty ");
-							
-							Thread.sleep(1000);
-							dedupePage.clickresetbutton();
-						}
-						if(testId.equals("TC_03")) {
-							
-							
-							dedupePage.firstnamefeild(firstName);
-							
-							//dedupePage.lastnamefeild(lastName);
-							dedupePage.fathernamefeild(fatherName);
-							dedupePage.dobButtonclick();
-							Thread.sleep(500);
-							
-							dedupePage.yeardroupDownclick();
-							Thread.sleep(200);
-					      	 
-					      	 driver.findElement(By.xpath("//button[text()='"+year+"']")).click();
-					      	 Thread.sleep(200);
-					      	 for(int i=1;i<monthval;i++) {
-					      		 dedupePage.monthclick();
-					      		 
-					      	 }
-					      	 Thread.sleep(200);
-					      	 driver.findElement(By.xpath("//button[text()='"+date+"']")).click();
-							dedupePage.panfeild(pan);
-							dedupePage.mobileNumberfeild(mobilenumber);
-							dedupePage.customerDedupeButtonclick();
-							Assert.assertEquals(dedupePage.lastnamevalidator.getText().toString(), message);
-							test.log(Status.PASS, "Validation last name error message when  last name is empty ");
-							Thread.sleep(1000);
-							dedupePage.clickresetbutton();
-						}
-						if(testId.equals("TC_04")) {
-							
-							
-							dedupePage.firstnamefeild(firstName);
-							
-							dedupePage.lastnamefeild(lastName);
-							//dedupePage.fathernamefeild(fatherName);
-							dedupePage.dobButtonclick();
-							Thread.sleep(500);
-							
-							dedupePage.yeardroupDownclick();
-							Thread.sleep(200);
-					      	 
-					      	 driver.findElement(By.xpath("//button[text()='"+year+"']")).click();
-					      	 Thread.sleep(200);
-					      	 for(int i=1;i<monthval;i++) {
-					      		 dedupePage.monthclick();
-					      		 
-					      	 }
-					      	 Thread.sleep(200);
-					      	 driver.findElement(By.xpath("//button[text()='"+date+"']")).click();
-							dedupePage.panfeild(pan);
-							dedupePage.mobileNumberfeild(mobilenumber);
-							dedupePage.customerDedupeButtonclick();
-							Assert.assertEquals(dedupePage.fathernamevalidator.getText().toString(), message);
-							test.log(Status.PASS, "Validation error message when  father name is empty ");
-							Thread.sleep(1000);
 							dedupePage.clickresetbutton();
 						}
 						
-						if(testId.equals("TC_06")) {
-							
+						//Validating the validation on Last Name
+						if(testId.equals("TC_03")) {
 							dedupePage.firstnamefeild(firstName);
+							dedupePage.fathernamefeild(fatherName);
+							dedupePage.dobButtonclick();
+							Thread.sleep(500);
 							
+							dedupePage.yeardroupDownclick();
+							Thread.sleep(200);
+					      	 driver.findElement(By.xpath("//button[text()='"+year+"']")).click();
+					      	 Thread.sleep(200);
+					      	 for(int i=1;i<monthval;i++) {
+					      		 dedupePage.monthclick();
+					      		 
+					      	 }
+					      	 Thread.sleep(200);
+					      	 driver.findElement(By.xpath("//button[text()='"+date+"']")).click();
+							dedupePage.panfeild(pan);
+							dedupePage.mobileNumberfeild(mobilenumber);
+							dedupePage.customerDedupeButtonclick();
+							Assert.assertEquals(dedupePage.gettext(dedupePage.lastnamevalidator), message);
+							test.log(Status.PASS, "Validation last name error message when  last name is empty ");
+							dedupePage.clickresetbutton();
+						}
+						
+						//Validating the Validation on father name
+						if(testId.equals("TC_04")) {
+							dedupePage.firstnamefeild(firstName);
+							dedupePage.lastnamefeild(lastName);
+							dedupePage.dobButtonclick();
+							Thread.sleep(500);
+							dedupePage.yeardroupDownclick();
+							Thread.sleep(200);
+					      	 driver.findElement(By.xpath("//button[text()='"+year+"']")).click();
+					      	 Thread.sleep(200);
+					      	 for(int i=1;i<monthval;i++) {
+					      		 dedupePage.monthclick();
+					      		 
+					      	 }
+					      	 Thread.sleep(200);
+					      	 driver.findElement(By.xpath("//button[text()='"+date+"']")).click();
+							dedupePage.panfeild(pan);
+							dedupePage.mobileNumberfeild(mobilenumber);
+							dedupePage.customerDedupeButtonclick();
+							Assert.assertEquals(dedupePage.gettext(dedupePage.fathernamevalidator), message);
+							test.log(Status.PASS, "Validation error message when  father name is empty ");
+							
+							dedupePage.clickresetbutton();
+						}
+						//Validating the validation if mobile number is empty
+						if(testId.equals("TC_06")) {
+							dedupePage.firstnamefeild(firstName);
 							dedupePage.lastnamefeild(lastName);
 							dedupePage.fathernamefeild(fatherName);
 							dedupePage.dobButtonclick();
@@ -234,54 +247,38 @@ public class DedupeTest extends BaseFile {
 					      	 Thread.sleep(200);
 					      	 driver.findElement(By.xpath("//button[text()='"+date+"']")).click();
 							dedupePage.panfeild(pan);
-							//dedupePage.mobileNumberfeild(mobilenumber);
 							dedupePage.customerDedupeButtonclick();
-							Assert.assertEquals(dedupePage.mobilenumbervalidator.getText().toString(), message);
+							Assert.assertEquals(dedupePage.gettext(dedupePage.mobilenumbervalidator), message);
 							test.log(Status.PASS, "Validation  error message when mobile  is empty ");
-							Thread.sleep(1000);
+							
 							dedupePage.clickresetbutton();
 							
 						}
+						//Validating the validation on DOB Field
 						if(testId.equals("TC_05")) {
 						
 						dedupePage.firstnamefeild(firstName);
-						
 						dedupePage.lastnamefeild(lastName);
 						dedupePage.fathernamefeild(fatherName);
-//						dedupePage.dobButtonclick();
-//						Thread.sleep(500);
-//						
-//						dedupePage.yeardroupDownclick();
-//						Thread.sleep(200);
-//				      	 
-//				      	 driver.findElement(By.xpath("//button[text()='"+year+"']")).click();
-//				      	 Thread.sleep(200);
-//				      	 for(int i=1;i<monthval;i++) {
-//				      		 dedupePage.monthclick();
-//				      		 
-//				      	 }
-//				      	 Thread.sleep(200);
-//				      	 driver.findElement(By.xpath("//button[text()='"+date+"']")).click();
-						dedupePage.panfeild(pan);
+                        dedupePage.panfeild(pan);
 						dedupePage.mobileNumberfeild(mobilenumber);
 						dedupePage.customerDedupeButtonclick();
-						Assert.assertEquals(dedupePage.dobvalidator.getText().toString(), message);
+						Assert.assertEquals(dedupePage.gettext(dedupePage.dobvalidator), message);
 						test.log(Status.PASS, "Validation  error message when mobile  is empty ");
-						Thread.sleep(1000);
+						
 						dedupePage.clickresetbutton();
 					}
+						// Validating the validation on mobile number
 						if(testId.equals("TC_07") || testId.equals("TC_08") || testId.equals("TC_09")) {
 						
 						dedupePage.firstnamefeild(firstName);
-						
 						dedupePage.lastnamefeild(lastName);
 						dedupePage.fathernamefeild(fatherName);
 						dedupePage.dobButtonclick();
 						Thread.sleep(500);
-						
 						dedupePage.yeardroupDownclick();
 						Thread.sleep(200);
-				      	 
+				      	 //This use to select year form the provided year Matrix on the basis of text.
 				      	 driver.findElement(By.xpath("//button[text()='"+year+"']")).click();
 				      	 Thread.sleep(200);
 				      	 for(int i=1;i<monthval;i++) {
@@ -289,29 +286,28 @@ public class DedupeTest extends BaseFile {
 				      		 
 				      	 }
 				      	 Thread.sleep(200);
+				      	//This use to select date form the provided year Matrix on the basis of text.
 				      	 driver.findElement(By.xpath("//button[text()='"+date+"']")).click();
 						dedupePage.panfeild(pan);
 						dedupePage.mobileNumberfeild(mobilenumber);
 						dedupePage.customerDedupeButtonclick();
 						Thread.sleep(500);
-						Assert.assertEquals(dedupePage.mobilenumbervalidator.getText().toString(), message);
+						Assert.assertEquals(dedupePage.gettext(dedupePage.mobilenumbervalidator), message);
 						test.log(Status.PASS, "Validation  error message when mobile  is incorrect");
-						Thread.sleep(1000);
 						dedupePage.clickresetbutton();
 					}
+						//Validating the validation on PAN Field
+						
 						if(testId.equals("TC_10")) {
-						
 						dedupePage.firstnamefeild(firstName);
-						
 						dedupePage.lastnamefeild(lastName);
 						dedupePage.fathernamefeild(fatherName);
 						dedupePage.dobButtonclick();
 						Thread.sleep(500);
-						
 						dedupePage.yeardroupDownclick();
 						Thread.sleep(200);
 				      	 
-				      	 driver.findElement(By.xpath("//button[text()='"+year+"']")).click();
+				      driver.findElement(By.xpath("//button[text()='"+year+"']")).click();
 				      	 Thread.sleep(200);
 				      	 for(int i=1;i<monthval;i++) {
 				      		 dedupePage.monthclick();
@@ -322,9 +318,8 @@ public class DedupeTest extends BaseFile {
 						dedupePage.panfeild(pan);
 						dedupePage.mobileNumberfeild(mobilenumber);
 						dedupePage.customerDedupeButtonclick();
-						Assert.assertEquals(dedupePage.panvalidator.getText().toString(), message);
+						Assert.assertEquals(dedupePage.gettext(dedupePage.panvalidator), message);
 						test.log(Status.PASS, "Validation  error message when mobile  is empty ");
-						Thread.sleep(1000);
 						dedupePage.clickresetbutton();
 					}
 						

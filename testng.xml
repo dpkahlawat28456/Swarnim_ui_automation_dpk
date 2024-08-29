@@ -13,6 +13,7 @@
 			<class name="testcases.login.LoginTest" />
 			<class name="testcases.login.BranchListingTest" />
 			<class name="testcases.customer.dedupe.DedupeTest" />
+			<class name="testcases.customer.creation.KYCTest" />
 
 		</classes>
 	</test> <!-- Test -->

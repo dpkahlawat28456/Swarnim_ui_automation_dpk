@@ -40,8 +40,6 @@ public class BranchListingTest extends BaseFile {
 	private void selectBranchCodeFromBranchListingAfterLogin() throws InterruptedException {
 		try {
 			test = extent.createTest("Validate navigation to dashboard from branch selection page");
-			Thread.sleep(2000);
-			
 			branchListingPage.selectBranchCode();
 			Assert.assertEquals(branchListingPage.customer360Tab.getText(), "Customer 360");
 
