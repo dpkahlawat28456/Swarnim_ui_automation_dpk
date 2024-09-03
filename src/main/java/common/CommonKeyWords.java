@@ -2,6 +2,8 @@ package common;
 
 import java.time.Duration;
 import java.util.List;
+
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -18,11 +20,19 @@ public class CommonKeyWords {
 
 	public CommonKeyWords(WebDriver driver, long timeoutInSeconds) {
 		this.driver = driver;
-		wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(150));
 	}
 
 	public void click(WebElement element) {
+		wait.until(ExpectedConditions.visibilityOf(element));
 		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+	}
+	
+	public void waitForElementToBeClickable(WebElement element)
+	{
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(element));		
+		
 	}
 
 	public void JavaScriptclick(WebElement element) {
@@ -43,6 +53,11 @@ public class CommonKeyWords {
 	public void enterText(WebElement element, String text) {
 		wait.until(ExpectedConditions.visibilityOf(element)).clear();
 		element.sendKeys(text);
+	}
+	public void waitForAlertAndAccept() {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+		alert.accept();
 	}
 
 	public void enter(WebElement element, Keys enter) {
