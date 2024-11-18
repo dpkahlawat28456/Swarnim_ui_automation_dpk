@@ -42,7 +42,7 @@ public class BankInformationTest extends BaseFile {
 	@Test
 	private void swarnimLoginPage() throws Exception {
 
-		
+		test = extent.createTest("Validating The Bank Information Page");
 				
 		
 		bankPage.Buttonclick(bankPage.next);

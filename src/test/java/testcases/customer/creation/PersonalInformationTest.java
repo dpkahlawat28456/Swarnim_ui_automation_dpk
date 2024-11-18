@@ -95,12 +95,16 @@ public class PersonalInformationTest extends BaseFile {
 
 		try {
 					JSONObject testData = (JSONObject) entry.getValue();
+					String str = Integer.toString(personalPage.randomNumber());
+					StringBuilder sb = new StringBuilder();
+					sb.append("45");
+					sb.append(str);
 					testScenario = new String((String) testData.get("testsenario"));
 					testId= new String((String) testData.get("testId")).toString();
 					residenceYear= new String((String) testData.get("yearsofResident")).toString();
 					gender= new String((String) testData.get("gender")).toString();
 					education= new String((String) testData.get("education")).toString();
-					mobile= new String((String) testData.get("mobile")).toString();
+					mobile= sb.toString();
 					marital= new String((String) testData.get("mertalStatus")).toString();
 					religion= new String((String) testData.get("religion")).toString();
 					motherName= new String((String) testData.get("motherName")).toString();
@@ -120,7 +124,10 @@ public class PersonalInformationTest extends BaseFile {
                
 	
        try {
-    	           
+    	   
+    	   
+    	        
+    	        if(testId.equals("TC_01")) {   
                  personalPage.enterValue(residenceYear, personalPage.noOfyear);
                  personalPage.Buttonclick(personalPage.education);
                  Thread.sleep(200);
@@ -144,8 +151,204 @@ public class PersonalInformationTest extends BaseFile {
 		      	
 		      	 personalPage.Buttonclick(personalPage.next);
 		      	 
-		      	 
-                 
+    	        }
+    	        
+    	        if(testId.equals("TC_02")) {
+					Thread.sleep(1000);
+					personalPage.Buttonclick(personalPage.back);
+					
+					personalPage.Buttonclick(personalPage.relegion);
+	                Thread.sleep(200);
+			      	 driver.findElement(By.cssSelector("[data-value='" + religion + "']")).click();
+			      	personalPage.Buttonclick(personalPage.next);
+			      	 
+					
+					Thread .sleep(500);
+			    	//Assert.assertEquals(kycPage.isElementdisplayed(kycPage.back), true);
+					test.log(Status.PASS, "User abel to proceed with Religion Muslim");
+				}	    
+    	        if(testId.equals("TC_03")) {
+					Thread.sleep(1000);
+					personalPage.Buttonclick(personalPage.back);
+					
+					personalPage.Buttonclick(personalPage.relegion);
+	                Thread.sleep(200);
+			      	 driver.findElement(By.cssSelector("[data-value='" + religion + "']")).click();
+			      	personalPage.Buttonclick(personalPage.next);
+			      	 
+					
+					Thread .sleep(500);
+			    	//Assert.assertEquals(kycPage.isElementdisplayed(kycPage.back), true);
+					test.log(Status.PASS, "User abel to proceed with Religion Christian ");
+				}	    
+    	        if(testId.equals("TC_04")) {
+					Thread.sleep(1000);
+					personalPage.Buttonclick(personalPage.back);
+					
+					personalPage.Buttonclick(personalPage.relegion);
+	                Thread.sleep(200);
+			      	 driver.findElement(By.cssSelector("[data-value='" + religion + "']")).click();
+			      	personalPage.Buttonclick(personalPage.next);
+			      	 
+					
+					Thread .sleep(500);
+			    	//Assert.assertEquals(kycPage.isElementdisplayed(kycPage.back), true);
+					test.log(Status.PASS, "User abel to proceed with Religion Sikh ");
+				}	    
+    	        if(testId.equals("TC_05")) {
+					Thread.sleep(1000);
+					personalPage.Buttonclick(personalPage.back);
+					
+					personalPage.Buttonclick(personalPage.relegion);
+	                Thread.sleep(200);
+			      	 driver.findElement(By.cssSelector("[data-value='" + religion + "']")).click();
+			      	personalPage.Buttonclick(personalPage.next);
+			      	 
+					
+					Thread .sleep(500);
+			    	//Assert.assertEquals(kycPage.isElementdisplayed(kycPage.back), true);
+					test.log(Status.PASS, "User abel to proceed with Religion ");
+				}	    
+    	        if(testId.equals("TC_06")) {
+					Thread.sleep(1000);
+					personalPage.Buttonclick(personalPage.back);
+					//test = extent.createTest("Validate the positive online verification flow with prefix Mrs");
+					personalPage.Buttonclick(personalPage.relegion);
+	                Thread.sleep(200);
+			      	 driver.findElement(By.cssSelector("[data-value='" + religion + "']")).click();
+			      	personalPage.Buttonclick(personalPage.next);
+			      	 
+					
+					Thread .sleep(500);
+			    	//Assert.assertEquals(kycPage.isElementdisplayed(kycPage.back), true);
+					test.log(Status.PASS, "User abel to proceed with prefix Mrs ");
+				}	    
+    	        if(testId.equals("TC_07")) {
+					Thread.sleep(1000);
+					personalPage.Buttonclick(personalPage.back);
+					//test = extent.createTest("Validate the positive online verification flow with prefix Mrs");
+					personalPage.Buttonclick(personalPage.relegion);
+	                Thread.sleep(200);
+			      	 driver.findElement(By.cssSelector("[data-value='" + religion + "']")).click();
+			      	personalPage.Buttonclick(personalPage.next);
+			      	 
+					
+					Thread .sleep(500);
+			    	//Assert.assertEquals(kycPage.isElementdisplayed(kycPage.back), true);
+					test.log(Status.PASS, "User abel to proceed with prefix Mrs ");
+				}	    
+    	        if(testId.equals("TC_08")) {
+					Thread.sleep(1000);
+					personalPage.Buttonclick(personalPage.back);
+					//test = extent.createTest("Validate the positive online verification flow with prefix Mrs");
+					personalPage.Buttonclick(personalPage.relegion);
+	                Thread.sleep(200);
+			      	 driver.findElement(By.cssSelector("[data-value='" + religion + "']")).click();
+			      	personalPage.Buttonclick(personalPage.next);
+			      	 
+					
+					Thread .sleep(500);
+			    	//Assert.assertEquals(kycPage.isElementdisplayed(kycPage.back), true);
+					test.log(Status.PASS, "User abel to proceed with prefix Mrs ");
+				}	    
+    	        if(testId.equals("TC_09")) {
+					Thread.sleep(1000);
+					personalPage.Buttonclick(personalPage.back);
+					//test = extent.createTest("Validate the positive online verification flow with prefix Mrs");
+					personalPage.Buttonclick(personalPage.relegion);
+	                Thread.sleep(200);
+			      	 driver.findElement(By.cssSelector("[data-value='" + religion + "']")).click();
+			      	personalPage.Buttonclick(personalPage.next);
+			      	 
+					
+					Thread .sleep(500);
+			    	//Assert.assertEquals(kycPage.isElementdisplayed(kycPage.back), true);
+					test.log(Status.PASS, "User abel to proceed with prefix Mrs ");
+				}	  
+    	        if(testId.equals("TC_10")) {
+					Thread.sleep(1000);
+					personalPage.Buttonclick(personalPage.back);
+					//test = extent.createTest("Validate the positive online verification flow with prefix Mrs");
+					personalPage.Buttonclick(personalPage.socialStatus);
+	                Thread.sleep(200);
+			      	 driver.findElement(By.cssSelector("[data-value='" + socialStaus + "']")).click();
+			      	personalPage.Buttonclick(personalPage.next);
+			      	 
+					
+					Thread .sleep(500);
+			    	//Assert.assertEquals(kycPage.isElementdisplayed(kycPage.back), true);
+					test.log(Status.PASS, "User abel to proceed with prefix Mrs ");
+				}	    
+    	        if(testId.equals("TC_11")) {
+					Thread.sleep(1000);
+					personalPage.Buttonclick(personalPage.back);
+					//test = extent.createTest("Validate the positive online verification flow with prefix Mrs");
+					personalPage.Buttonclick(personalPage.socialStatus);
+	                Thread.sleep(200);
+			      	 driver.findElement(By.cssSelector("[data-value='" + socialStaus + "']")).click();
+			      	personalPage.Buttonclick(personalPage.next);
+			      	 
+					
+					Thread .sleep(500);
+			    	//Assert.assertEquals(kycPage.isElementdisplayed(kycPage.back), true);
+					test.log(Status.PASS, "User abel to proceed with prefix Mrs ");
+				}	    
+    	        if(testId.equals("TC_12")) {
+					Thread.sleep(1000);
+					personalPage.Buttonclick(personalPage.back);
+					//test = extent.createTest("Validate the positive online verification flow with prefix Mrs");
+					personalPage.Buttonclick(personalPage.socialStatus);
+	                Thread.sleep(200);
+			      	 driver.findElement(By.cssSelector("[data-value='" + socialStaus + "']")).click();
+			      	personalPage.Buttonclick(personalPage.next);
+			      	 
+					
+					Thread .sleep(500);
+			    	//Assert.assertEquals(kycPage.isElementdisplayed(kycPage.back), true);
+					test.log(Status.PASS, "User abel to proceed with prefix Mrs ");
+				}	    
+    	        if(testId.equals("TC_13") || testId.equals("TC_14")) {
+					Thread.sleep(1000);
+					personalPage.Buttonclick(personalPage.back);
+					//test = extent.createTest("Validate the positive online verification flow with prefix Mrs");
+					personalPage.Buttonclick(personalPage.gender);
+	                Thread.sleep(200);
+			      	 driver.findElement(By.cssSelector("[data-value='" + gender + "']")).click();
+			      	personalPage.Buttonclick(personalPage.next);
+			      	 
+					
+					Thread .sleep(500);
+			    	//Assert.assertEquals(kycPage.isElementdisplayed(kycPage.back), true);
+					test.log(Status.PASS, "User abel to proceed with prefix Mrs ");
+				}	    
+    	        if(testId.equals("TC_15") || testId.equals("TC_16")|| testId.equals("TC_17")|| testId.equals("TC_18")|| testId.equals("TC_19")) {
+					Thread.sleep(1000);
+					personalPage.Buttonclick(personalPage.back);
+					//test = extent.createTest("Validate the positive online verification flow with prefix Mrs");
+					personalPage.Buttonclick(personalPage.education);
+	                Thread.sleep(200);
+			      	 driver.findElement(By.cssSelector("[data-value='" + education + "']")).click();
+			      	personalPage.Buttonclick(personalPage.next);
+			      	 
+					
+					Thread .sleep(500);
+			    	//Assert.assertEquals(kycPage.isElementdisplayed(kycPage.back), true);
+					test.log(Status.PASS, "User abel to proceed with prefix Mrs ");
+				}	 
+    	        if(testId.equals("TC_20") || testId.equals("TC_21")) {
+					Thread.sleep(1000);
+					personalPage.Buttonclick(personalPage.back);
+					//test = extent.createTest("Validate the positive online verification flow with prefix Mrs");
+					personalPage.Buttonclick(personalPage.maritalStatus);
+	                Thread.sleep(200);
+			      	 driver.findElement(By.cssSelector("[data-value='" + marital + "']")).click();
+			      	personalPage.Buttonclick(personalPage.next);
+			      	 
+					
+					Thread .sleep(500);
+			    	//Assert.assertEquals(kycPage.isElementdisplayed(kycPage.back), true);
+					test.log(Status.PASS, "User abel to proceed with prefix Mrs ");
+				}	
 
 			
 					

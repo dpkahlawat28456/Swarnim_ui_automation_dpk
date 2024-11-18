@@ -41,7 +41,8 @@ public class OccupationTest extends BaseFile {
 
 	@Test
 	private void swarnimLoginPage() throws Exception {
-
+    
+		test = extent.createTest("Validating The Occupation Detail page");
 		
 				
 		occupationPage.Buttonclick(occupationPage.no);

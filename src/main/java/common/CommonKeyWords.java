@@ -2,6 +2,7 @@ package common;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Random;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -13,7 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class CommonKeyWords {
+public class CommonKeyWords  {
 
 	public WebDriver driver;
 	public WebDriverWait wait;
@@ -25,7 +26,10 @@ public class CommonKeyWords {
 
 	public void click(WebElement element) {
 		wait.until(ExpectedConditions.visibilityOf(element));
-		wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+		if (element.isDisplayed()) {
+		    element.click();
+		}
 	}
 	
 	public void waitForElementToBeClickable(WebElement element)
@@ -35,6 +39,13 @@ public class CommonKeyWords {
 		
 	}
 
+	public int randomNumber() {
+		 Random random = new Random();
+	        int randomNumber = 10000000 + random.nextInt(90000000);
+		
+		return randomNumber;
+	}
+	
 	public void JavaScriptclick(WebElement element) {
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", element);

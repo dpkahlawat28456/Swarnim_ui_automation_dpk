@@ -1,72 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="listeners.ScreenshotListener"/>
-  </listeners>
-  <test thread-count="5" name="chromeTest(failed)">
-    <parameter name="browser" value="chrome"/>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.login.Login">
+      <class name="testcases.login.LoginTest">
         <methods>
-          <include name="closedriver"/>
-          <include name="calldriver"/>
-          <include name="callBaseReport"/>
-          <include name="flushReport"/>
-          <include name="navigateToBaseURL"/>
           <include name="swarnimLoginPage"/>
-        </methods>
-      </class> <!-- testcases.login.Login -->
-      <class name="testcases.customer.creation.EmploymentTest">
-        <methods>
           <include name="closedriver"/>
-          <include name="callBaseReport"/>
           <include name="calldriver"/>
           <include name="navigateToBaseURL"/>
-          <include name="flushReport"/>
-          <include name="swarnimLoginPage" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- testcases.customer.creation.EmploymentTest -->
-      <class name="testcases.customer.creation.RMTest">
-        <methods>
-          <include name="closedriver"/>
-          <include name="callBaseReport"/>
-          <include name="calldriver"/>
-          <include name="flushReport"/>
-          <include name="navigateToBaseURL"/>
-          <include name="swarnimLoginPage"/>
-        </methods>
-      </class> <!-- testcases.customer.creation.RMTest -->
-      <class name="testcases.customer.creation.KYCTest">
-        <methods>
-          <include name="closedriver"/>
-          <include name="swarnimKYCPage" invocation-numbers="0"/>
-          <include name="navigateToBaseURL"/>
-          <include name="calldriver"/>
           <include name="callBaseReport"/>
           <include name="flushReport"/>
         </methods>
-      </class> <!-- testcases.customer.creation.KYCTest -->
-      <class name="testcases.customer.creation.PersonalInformationTest">
-        <methods>
-          <include name="navigateToBaseURL"/>
-          <include name="closedriver"/>
-          <include name="callBaseReport"/>
-          <include name="calldriver"/>
-          <include name="swarnimLoginPage" invocation-numbers="0"/>
-          <include name="flushReport"/>
-        </methods>
-      </class> <!-- testcases.customer.creation.PersonalInformationTest -->
-      <class name="testcases.customer.creation.NomineeTest">
-        <methods>
-          <include name="closedriver"/>
-          <include name="swarnimLoginPage" invocation-numbers="0"/>
-          <include name="navigateToBaseURL"/>
-          <include name="calldriver"/>
-          <include name="callBaseReport"/>
-          <include name="flushReport"/>
-        </methods>
-      </class> <!-- testcases.customer.creation.NomineeTest -->
+      </class> <!-- testcases.login.LoginTest -->
     </classes>
-  </test> <!-- chromeTest(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

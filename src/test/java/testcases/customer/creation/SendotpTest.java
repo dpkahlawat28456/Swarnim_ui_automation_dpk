@@ -116,8 +116,8 @@ public class SendotpTest extends BaseFile {
            Assert.assertEquals(sendotpPage.isElementdisplayed(sendotpPage.customerCreate), true);
 					
 					
-						
-                    
+				
+				Thread.sleep(2000);
 					
 
 				} catch (org.openqa.selenium.NoSuchElementException e) {

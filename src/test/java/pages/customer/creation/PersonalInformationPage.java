@@ -51,9 +51,10 @@ public class PersonalInformationPage extends CommonKeyWords {
 	public WebElement fatherName;
 	@FindBy(xpath = "/html/body/div[1]/div/div[2]/div[2]/div/form/div[2]/div[12]/div/div/div/input")
 	public WebElement placeOfBirth;
-	@FindBy(xpath ="/html/body/div[1]/div/div[2]/div[2]/div/form/div[3]/div/button")
+	@FindBy(xpath ="//button[@type='submit']")
 	public WebElement next;
-	
+	@FindBy(xpath ="//button[text()='Back']")
+	public WebElement back;
 	
 	
 	

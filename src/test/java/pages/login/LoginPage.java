@@ -26,6 +26,7 @@ public class LoginPage extends CommonKeyWords {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	//Relative xpath need to be taken
 
 	@FindBy(xpath = "//*[@id=\"undefined-basic\"]")
 	public WebElement EmailID;

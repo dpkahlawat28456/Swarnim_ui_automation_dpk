@@ -43,7 +43,7 @@ public class RMTest extends BaseFile {
 	@Test
 	private void swarnimLoginPage() throws Exception {
 
-		
+		test = extent.createTest("Validating The RM Selection page");
 				
 		 rmPage.Buttonclick(rmPage.RM);
 		

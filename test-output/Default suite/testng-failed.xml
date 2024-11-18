@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.customer.dedupe.DedupeTest">
+      <class name="testcases.login.LoginTest">
         <methods>
-          <include name="closedriver"/>
           <include name="swarnimLoginPage"/>
-          <include name="callBaseReport"/>
+          <include name="closedriver"/>
           <include name="calldriver"/>
           <include name="navigateToBaseURL"/>
+          <include name="callBaseReport"/>
           <include name="flushReport"/>
         </methods>
-      </class> <!-- testcases.customer.dedupe.DedupeTest -->
+      </class> <!-- testcases.login.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,190 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="6" failed="6" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-02T10:00:49 IST" name="Suite" finished-at="2024-09-02T10:03:35 IST" duration-ms="166121">
+  <suite started-at="2024-11-13T16:45:45 IST" name="Default suite" finished-at="2024-11-13T16:45:45 IST" duration-ms="69">
     <groups>
     </groups>
-    <test started-at="2024-09-02T10:00:49 IST" name="chromeTest" finished-at="2024-09-02T10:03:35 IST" duration-ms="166121">
-      <class name="testcases.customer.creation.OccupationTest">
-        <test-method is-config="true" signature="navigateToBaseURL()[pri:0, instance:testcases.customer.creation.OccupationTest@480d3575]" started-at="2024-09-02T10:03:24 IST" name="navigateToBaseURL" finished-at="2024-09-02T10:03:24 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToBaseURL -->
-        <test-method signature="swarnimLoginPage()[pri:0, instance:testcases.customer.creation.OccupationTest@480d3575]" started-at="2024-09-02T10:03:24 IST" name="swarnimLoginPage" finished-at="2024-09-02T10:03:24 IST" duration-ms="167" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- swarnimLoginPage -->
-      </class> <!-- testcases.customer.creation.OccupationTest -->
-      <class name="testcases.customer.creation.RMTest">
-        <test-method is-config="true" signature="navigateToBaseURL()[pri:0, instance:testcases.customer.creation.RMTest@194fad1]" started-at="2024-09-02T10:03:30 IST" name="navigateToBaseURL" finished-at="2024-09-02T10:03:30 IST" duration-ms="6" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToBaseURL -->
-        <test-method signature="swarnimLoginPage()[pri:0, instance:testcases.customer.creation.RMTest@194fad1]" started-at="2024-09-02T10:03:30 IST" name="swarnimLoginPage" finished-at="2024-09-02T10:03:35 IST" duration-ms="5279" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"[data-value='Nikhil Jaiswal']"}
-  (Session info: chrome=127.0.6533.119)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-119-generic', java.version: '22.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9c4218c1b33e191d47fba6627cf0ae52, findElement {value=[data-value='Nikhil Jaiswal'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45209}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:45209/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9c4218c1b33e191d47fba6627cf0ae52]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"[data-value='Nikhil Jaiswal']"}
-  (Session info: chrome=127.0.6533.119)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-119-generic', java.version: '22.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9c4218c1b33e191d47fba6627cf0ae52, findElement {value=[data-value='Nikhil Jaiswal'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45209}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:45209/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9c4218c1b33e191d47fba6627cf0ae52
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-at testcases.customer.creation.RMTest.swarnimLoginPage(RMTest.java:50)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- swarnimLoginPage -->
-      </class> <!-- testcases.customer.creation.RMTest -->
-      <class name="testcases.customer.creation.EmploymentTest">
-        <test-method is-config="true" signature="navigateToBaseURL()[pri:0, instance:testcases.customer.creation.EmploymentTest@1807e3f6]" started-at="2024-09-02T10:03:19 IST" name="navigateToBaseURL" finished-at="2024-09-02T10:03:19 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToBaseURL -->
-        <test-method signature="swarnimLoginPage(java.util.Map)[pri:0, instance:testcases.customer.creation.EmploymentTest@1807e3f6]" started-at="2024-09-02T10:03:19 IST" name="swarnimLoginPage" data-provider="employmentdataprovider" finished-at="2024-09-02T10:03:24 IST" duration-ms="5301" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Sheet1rowNum1={"income":"10 Lacs to 25 Lacs","testsenario":"Validating Positive Journey of Customer Employment","testId":"TC_01","occuption":"Salaried"}}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Deliberate failure to capture screenshot]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Deliberate failure to capture screenshot
-at org.testng.Assert.fail(Assert.java:111)
-at testcases.customer.creation.EmploymentTest.swarnimLoginPage(EmploymentTest.java:136)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- swarnimLoginPage -->
-      </class> <!-- testcases.customer.creation.EmploymentTest -->
-      <class name="testcases.login.Login">
-        <test-method is-config="true" signature="callBaseReport()[pri:0, instance:testcases.login.Login@3cce5371]" started-at="2024-09-02T10:00:49 IST" name="callBaseReport" finished-at="2024-09-02T10:00:49 IST" duration-ms="209" status="PASS">
+    <test started-at="2024-11-13T16:45:45 IST" name="Default test" finished-at="2024-11-13T16:45:45 IST" duration-ms="69">
+      <class name="testcases.login.LoginTest">
+        <test-method is-config="true" signature="callBaseReport()[pri:0, instance:testcases.login.LoginTest@247bddad]" started-at="2024-11-13T16:45:45 IST" name="callBaseReport" finished-at="2024-11-13T16:45:45 IST" duration-ms="259" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- callBaseReport -->
-        <test-method is-config="true" signature="calldriver(java.lang.String)[pri:0, instance:testcases.login.Login@3cce5371]" started-at="2024-09-02T10:00:49 IST" name="calldriver" finished-at="2024-09-02T10:00:52 IST" duration-ms="2550" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="calldriver(java.lang.String)[pri:0, instance:testcases.login.LoginTest@247bddad]" started-at="2024-11-13T16:45:45 IST" name="calldriver" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1731496545521" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeTest on method calldriver but has not been marked @Optional or defined
+in /tmp/testng-eclipse-363983553/testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeTest on method calldriver but has not been marked @Optional or defined
+in /tmp/testng-eclipse-363983553/testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:264)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:352)
+at org.testng.internal.Parameters.createParameters(Parameters.java:690)
+at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:163)
+at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:313)
+at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:655)
+at org.testng.TestRunner.beforeRun(TestRunner.java:644)
+at org.testng.TestRunner.run(TestRunner.java:610)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- calldriver -->
-        <test-method is-config="true" signature="navigateToBaseURL()[pri:0, instance:testcases.login.Login@3cce5371]" started-at="2024-09-02T10:00:52 IST" name="navigateToBaseURL" finished-at="2024-09-02T10:00:52 IST" duration-ms="43" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToBaseURL -->
-        <test-method signature="swarnimLoginPage()[pri:0, instance:testcases.login.Login@3cce5371]" started-at="2024-09-02T10:00:52 IST" name="swarnimLoginPage" finished-at="2024-09-02T10:01:00 IST" duration-ms="8385" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method signature="swarnimLoginPage(java.util.Map)[pri:0, instance:testcases.login.LoginTest@247bddad]" started-at="2024-11-13T16:45:45 IST" name="swarnimLoginPage" data-provider="loginPageDataProvider" finished-at="2024-11-13T16:45:45 IST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.RuntimeException">
             <message>
-              <![CDATA[Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "this.test" is null]]>
+              <![CDATA[java.lang.NullPointerException]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.aventstack.extentreports.ExtentTest.log(com.aventstack.extentreports.Status, String)" because "this.test" is null
-at testcases.login.Login.swarnimLoginPage(Login.java:66)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:58)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:159)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:809)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:946)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
 at org.testng.TestRunner.privateRun(TestRunner.java:739)
 at org.testng.TestRunner.run(TestRunner.java:614)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
@@ -200,261 +82,31 @@ at org.testng.TestNG.run(TestNG.java:1079)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: java.lang.NullPointerException
+at testcases.login.LoginTest.callTestDataFromExcel(LoginTest.java:56)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:54)
+... 25 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- swarnimLoginPage -->
-        <test-method is-config="true" signature="closedriver()[pri:0, instance:testcases.login.Login@3cce5371]" started-at="2024-09-02T10:03:35 IST" name="closedriver" finished-at="2024-09-02T10:03:35 IST" duration-ms="110" status="PASS">
+        <test-method is-config="true" signature="closedriver()[pri:0, instance:testcases.login.LoginTest@247bddad]" started-at="2024-11-13T16:45:45 IST" name="closedriver" finished-at="2024-11-13T16:45:45 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closedriver -->
-        <test-method is-config="true" signature="flushReport()[pri:0, instance:testcases.login.Login@3cce5371]" started-at="2024-09-02T10:03:35 IST" name="flushReport" finished-at="2024-09-02T10:03:36 IST" duration-ms="213" status="PASS">
+        <test-method is-config="true" signature="flushReport()[pri:0, instance:testcases.login.LoginTest@247bddad]" started-at="2024-11-13T16:45:45 IST" name="flushReport" finished-at="2024-11-13T16:45:45 IST" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
-      </class> <!-- testcases.login.Login -->
-      <class name="testcases.customer.creation.PersonalInformationTest">
-        <test-method is-config="true" signature="navigateToBaseURL()[pri:0, instance:testcases.customer.creation.PersonalInformationTest@55cb6996]" started-at="2024-09-02T10:03:13 IST" name="navigateToBaseURL" finished-at="2024-09-02T10:03:13 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToBaseURL -->
-        <test-method signature="swarnimLoginPage(java.util.Map)[pri:0, instance:testcases.customer.creation.PersonalInformationTest@55cb6996]" started-at="2024-09-02T10:03:13 IST" name="swarnimLoginPage" data-provider="personalInformationdataprovider" finished-at="2024-09-02T10:03:18 IST" duration-ms="5439" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Sheet1rowNum1={"fatherName":"Father","placeOfBirth":"Delhi","testsenario":"Validating the positive journey","education":"Graduation","yearsofResident":"12","gender":"Male","mobile":"2345768563","motherName":"mother","testId":"TC_01","socialStatus":"SC","mertalStatus":"Married","religion":"Hindu"}}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Deliberate failure to capture screenshot]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Deliberate failure to capture screenshot
-at org.testng.Assert.fail(Assert.java:111)
-at testcases.customer.creation.PersonalInformationTest.swarnimLoginPage(PersonalInformationTest.java:159)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- swarnimLoginPage -->
-      </class> <!-- testcases.customer.creation.PersonalInformationTest -->
-      <class name="testcases.customer.creation.NomineeTest">
-        <test-method is-config="true" signature="navigateToBaseURL()[pri:0, instance:testcases.customer.creation.NomineeTest@f1da57d]" started-at="2024-09-02T10:03:24 IST" name="navigateToBaseURL" finished-at="2024-09-02T10:03:24 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToBaseURL -->
-        <test-method signature="swarnimLoginPage(java.util.Map)[pri:0, instance:testcases.customer.creation.NomineeTest@f1da57d]" started-at="2024-09-02T10:03:24 IST" name="swarnimLoginPage" data-provider="personalInformationdataprovider" finished-at="2024-09-02T10:03:30 IST" duration-ms="5322" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Sheet1rowNum1={"testsenario":"Nominee Validating Postive senario","nominedobday":"3","nominedobyear":"1990","mobile":"9889765234","testId":"TC_01","nomineName":"Ram","nominedobmonth":"3","nominerelation":"Father"}}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Deliberate failure to capture screenshot]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Deliberate failure to capture screenshot
-at org.testng.Assert.fail(Assert.java:111)
-at testcases.customer.creation.NomineeTest.swarnimLoginPage(NomineeTest.java:154)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- swarnimLoginPage -->
-      </class> <!-- testcases.customer.creation.NomineeTest -->
-      <class name="testcases.customer.creation.KYCTest">
-        <test-method is-config="true" signature="navigateToBaseURL()[pri:0, instance:testcases.customer.creation.KYCTest@48e1f6c7]" started-at="2024-09-02T10:01:08 IST" name="navigateToBaseURL" finished-at="2024-09-02T10:01:08 IST" duration-ms="17" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToBaseURL -->
-        <test-method signature="swarnimKyc()[pri:1, instance:testcases.customer.creation.KYCTest@48e1f6c7]" started-at="2024-09-02T10:01:08 IST" name="swarnimKyc" finished-at="2024-09-02T10:02:13 IST" duration-ms="64813" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- swarnimKyc -->
-        <test-method is-config="true" signature="navigateToBaseURL()[pri:0, instance:testcases.customer.creation.KYCTest@48e1f6c7]" started-at="2024-09-02T10:02:13 IST" name="navigateToBaseURL" finished-at="2024-09-02T10:02:13 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToBaseURL -->
-        <test-method signature="swarnimKYCPage(java.util.Map)[pri:2, instance:testcases.customer.creation.KYCTest@48e1f6c7]" started-at="2024-09-02T10:02:13 IST" name="swarnimKYCPage" data-provider="KycPageDataProvider" finished-at="2024-09-02T10:03:13 IST" duration-ms="59984" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Sheet1rowNum1={"lastName":"Jaiswal","Idproof":"Aadhaar Card","prefix":"Mr","dobDay":"3","aadharno":"223456786534","firstName":"Nikhil","addressTwo":"Delhi","pinCode":"110006","testID":"TC_01","testSenario":"Validating","dobYear":"1999","dobMonth":"3","addressOne":"Delhi"}}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: /html/body/div[1]/div/div[2]/div[2]/div/form/div[2]/div[3]/div/div/div/div/input' (tried for 50 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: /html/body/div[1]/div/div[2]/div[2]/div/form/div[2]/div[3]/div/div/div/div/input' (tried for 50 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at common.CommonKeyWords.enterText(CommonKeyWords.java:44)
-at pages.customer.creation.KYCPage.enterValue(KYCPage.java:101)
-at testcases.customer.creation.KYCTest.swarnimKYCPage(KYCTest.java:149)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div/div[2]/div[2]/div/form/div[2]/div[3]/div/div/div/div/input"}
-  (Session info: chrome=127.0.6533.119)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.23.0', revision: '4df0a231af'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-119-generic', java.version: '22.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [9c4218c1b33e191d47fba6627cf0ae52, findElement {value=/html/body/div[1]/div/div[2]/div[2]/div/form/div[2]/div[3]/div/div/div/div/input, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 127.0.6533.119, chrome: {chromedriverVersion: 127.0.6533.119 (bdef6783a05..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45209}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:45209/devtoo..., se:cdpVersion: 127.0.6533.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9c4218c1b33e191d47fba6627cf0ae52
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:351)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy19.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-... 29 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- swarnimKYCPage -->
-      </class> <!-- testcases.customer.creation.KYCTest -->
-      <class name="testcases.login.BranchListingTest">
-        <test-method is-config="true" signature="pageURL()[pri:0, instance:testcases.login.BranchListingTest@4722ef0c]" started-at="2024-09-02T10:01:00 IST" name="pageURL" finished-at="2024-09-02T10:01:00 IST" duration-ms="12" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageURL -->
-        <test-method signature="selectBranchCodeFromBranchListingAfterLogin()[pri:1, instance:testcases.login.BranchListingTest@4722ef0c]" started-at="2024-09-02T10:01:00 IST" name="selectBranchCodeFromBranchListingAfterLogin" finished-at="2024-09-02T10:01:03 IST" duration-ms="2788" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- selectBranchCodeFromBranchListingAfterLogin -->
-        <test-method signature="selectCutomer360TabFromDashBoard()[pri:2, instance:testcases.login.BranchListingTest@4722ef0c]" started-at="2024-09-02T10:01:03 IST" name="selectCutomer360TabFromDashBoard" finished-at="2024-09-02T10:01:04 IST" duration-ms="1181" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- selectCutomer360TabFromDashBoard -->
-        <test-method is-config="true" signature="pageURL()[pri:0, instance:testcases.login.BranchListingTest@4722ef0c]" started-at="2024-09-02T10:01:03 IST" name="pageURL" finished-at="2024-09-02T10:01:03 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageURL -->
-        <test-method is-config="true" signature="pageURL()[pri:0, instance:testcases.login.BranchListingTest@4722ef0c]" started-at="2024-09-02T10:01:04 IST" name="pageURL" finished-at="2024-09-02T10:01:04 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pageURL -->
-        <test-method signature="clickCreateCustomerButton()[pri:3, instance:testcases.login.BranchListingTest@4722ef0c]" started-at="2024-09-02T10:01:04 IST" name="clickCreateCustomerButton" finished-at="2024-09-02T10:01:08 IST" duration-ms="3413" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickCreateCustomerButton -->
-      </class> <!-- testcases.login.BranchListingTest -->
-      <class name="testcases.customer.creation.BankInformationTest">
-        <test-method is-config="true" signature="navigateToBaseURL()[pri:0, instance:testcases.customer.creation.BankInformationTest@26abb146]" started-at="2024-09-02T10:03:35 IST" name="navigateToBaseURL" finished-at="2024-09-02T10:03:35 IST" duration-ms="6" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- navigateToBaseURL -->
-        <test-method signature="swarnimLoginPage()[pri:0, instance:testcases.customer.creation.BankInformationTest@26abb146]" started-at="2024-09-02T10:03:35 IST" name="swarnimLoginPage" finished-at="2024-09-02T10:03:35 IST" duration-ms="89" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- swarnimLoginPage -->
-      </class> <!-- testcases.customer.creation.BankInformationTest -->
-    </test> <!-- chromeTest -->
-  </suite> <!-- Suite -->
+      </class> <!-- testcases.login.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

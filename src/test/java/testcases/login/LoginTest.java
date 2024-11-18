@@ -80,6 +80,8 @@ public class LoginTest extends BaseFile {
 				boolean status = false;
 
 				try {
+					//There are several other ways to add data 
+					 //TODO Switch case can be use in pace of if 
 					JSONObject testData = (JSONObject) entry.getValue();
 					testScenarioRequest = new String((String) testData.get("testScenario"));
 					emailCred = new String((String) testData.get("email")).toString();
@@ -87,7 +89,7 @@ public class LoginTest extends BaseFile {
 					messageData = new String((String) testData.get("message"));
 					String resultValue = testData.get("result").toString();
 					status = Boolean.parseBoolean(resultValue);
-
+                         // Instead of providing hardcode we have another way to make dynamic
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
