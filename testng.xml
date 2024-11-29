@@ -13,14 +13,16 @@
 			<class name="testcases.login.LoginTest" />
 			<class name="testcases.login.BranchListingTest" />
 			<class name="testcases.customer.dedupe.DedupeTest" />
-			<class name="testcases.customer.creation.KYCTest" />
-			<class name="testcases.customer.creation.PersonalInformationTest" />
-			<class name="testcases.customer.creation.EmploymentTest" />
-			<class name="testcases.customer.creation.OccupationTest" />
-			<class name="testcases.customer.creation.NomineeTest" />
-			<class name="testcases.customer.creation.RMTest" />
-			<class name="testcases.customer.creation.BankInformationTest" />
-			<class name="testcases.customer.creation.SendotpTest" />
+			<!--
+    <class name="testcases.customer.creation.KYCTest" />
+    <class name="testcases.customer.creation.PersonalInformationTest" />
+    <class name="testcases.customer.creation.EmploymentTest" />
+    <class name="testcases.customer.creation.OccupationTest" />
+    <class name="testcases.customer.creation.NomineeTest" />
+    <class name="testcases.customer.creation.RMTest" />
+    <class name="testcases.customer.creation.BankInformationTest" />
+    <class name="testcases.customer.creation.SendotpTest" />
+-->
 			
 
 

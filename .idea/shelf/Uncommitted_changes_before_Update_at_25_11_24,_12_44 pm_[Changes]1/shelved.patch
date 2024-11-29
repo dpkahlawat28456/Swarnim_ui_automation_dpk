@@ -1,0 +1,978 @@
+Index: ExtentReport.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\n\n<!DOCTYPE html>\n<html>\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n<title>Automation Test Report</title>\n<link rel=\"apple-touch-icon\" href=\"https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png\">\n<link rel=\"shortcut icon\" href=\"https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png\">\n<link href=\"https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css\" rel=\"stylesheet\" />\n<link href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" rel=\"stylesheet\">\n<script src=\"https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js\"></script>\n<style type=\"text/css\"></style></head><body class=\"spa -report standard\">\n  <div class=\"app\">\n    <div class=\"layout\">\n<div class=\"header navbar\">\n<div class=\"vheader\">\n<div class=\"nav-logo\">\n<a href=\"#\">\n<div class=\"logo\" style=\"background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')\"></div>\n</a>\n</div>\n<ul class=\"nav-left\">\n<li class=\"search-box\">\n<a class=\"search-toggle\" href=\"#\">\n<i class=\"search-icon fa fa-search\"></i>\n<i class=\"search-icon-close fa fa-close\"></i>\n</a>\n</li>\n<li class=\"search-input\"><input id=\"search-tests\" class=\"form-control\" type=\"text\" placeholder=\"Search...\"></li>\n</ul>\n<ul class=\"nav-right\">\n<li class=\"m-r-10\">\n<a href=\"#\"><span class=\"badge badge-primary\">Automation Test Results</span></a>\n</li>\n<li class=\"m-r-10\">\n<a href=\"#\"><span class=\"badge badge-primary\">Sep 3, 2024 09:50:35 PM</span></a>\n</li>\n</ul>\n</div>\n</div><div class=\"side-nav\">\n<div class=\"side-nav-inner\">\n<ul class=\"side-nav-menu\">\n<li class=\"nav-item dropdown\" onclick=\"toggleView('test-view')\">\n<a id=\"nav-test\" class=\"dropdown-toggle\" href=\"#\">\n<span class=\"ico\"><i class=\"fa fa-list\"></i></span>\n</a>\n</li>\n<li class=\"nav-item dropdown\" onclick=\"toggleView('dashboard-view')\">\n<a id=\"nav-dashboard\" class=\"dropdown-toggle\" href=\"#\">\n<span class=\"ico\"><i class=\"fa fa-bar-chart\"></i></span>\n</a>\n</li>\n</ul>\n</div>\n</div>      <div class=\"vcontainer\">\n        <div class=\"main-content\">\n<div class=\"test-wrapper row view test-view\">\n  <div class=\"test-list\">\n    <div class=\"test-list-tools\">\n<ul class=\"tools pull-left\">\n<li><a href=\"#\"><span class=\"font-size-14\">Tests</span></a></li>\n</ul>\n<ul class=\"tools text-right\">\n<li class=\"dropdown\">\n<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><i class=\"fa fa-exclamation-circle\"></i></a>\n<ul id=\"status-toggle\" class=\"dropdown-menu dropdown-md p-v-0\">\n<a class=\"dropdown-item\" status=\"pass\" href=\"#\"><span>Pass</span><span class=\"status success\"></span></a>\n<div class=\"dropdown-divider\"></div>\n<a status=\"clear\" class=\"dropdown-item\" href=\"#\"><span>Clear</span><span class=\"pull-right\"><i class=\"fa fa-close\"></i></span></a>\n</ul>\n</li>\n</ul>\n</div>    <div class=\"test-list-wrapper scrollable\">\n      <ul class=\"test-list-item\">\n        <li class=\"test-item\"  status=\"pass\" test-id=\"1\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Verify user login with blank email Id</p>\n            <p class=\"text-sm\">\n              <span>9:50:39 PM</span> / <span>00:00:00:540</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Verify user login with blank email Id</h5>\n<span class='badge badge-success'>09.03.2024 9:50:39 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:50:40 PM</span>\n<span class='badge badge-default'>00:00:00:540</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:50:40 PM</td>\n        <td>\n          Validation message validated successfully for empty email\n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"2\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Verify user login with blank password</p>\n            <p class=\"text-sm\">\n              <span>9:50:40 PM</span> / <span>00:00:00:334</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Verify user login with blank password</h5>\n<span class='badge badge-success'>09.03.2024 9:50:40 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:50:41 PM</span>\n<span class='badge badge-default'>00:00:00:334</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:50:41 PM</td>\n        <td>\n          Validation message validated successfully for empty Password\n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"3\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Verify user login with invalid Email and Pass</p>\n            <p class=\"text-sm\">\n              <span>9:50:41 PM</span> / <span>00:00:02:039</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Verify user login with invalid Email and Pass</h5>\n<span class='badge badge-success'>09.03.2024 9:50:41 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:50:43 PM</span>\n<span class='badge badge-default'>00:00:02:039</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:50:43 PM</td>\n        <td>\n          Validation message validated successfully for invalid email and pass\n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"4\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Verify user login with Valid Email and Invalid Pass</p>\n            <p class=\"text-sm\">\n              <span>9:50:43 PM</span> / <span>00:00:01:036</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Verify user login with Valid Email and Invalid Pass</h5>\n<span class='badge badge-success'>09.03.2024 9:50:43 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:50:44 PM</span>\n<span class='badge badge-default'>00:00:01:036</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:50:44 PM</td>\n        <td>\n          Validation message validated successfully for invalid email and pass\n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"5\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Verify user login with Invalid Email and valid Pass</p>\n            <p class=\"text-sm\">\n              <span>9:50:44 PM</span> / <span>00:00:01:216</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Verify user login with Invalid Email and valid Pass</h5>\n<span class='badge badge-success'>09.03.2024 9:50:44 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:50:45 PM</span>\n<span class='badge badge-default'>00:00:01:216</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:50:45 PM</td>\n        <td>\n          Validation message validated successfully for invalid email and pass\n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"6\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Verify user login with valid credentials</p>\n            <p class=\"text-sm\">\n              <span>9:50:46 PM</span> / <span>00:00:00:742</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Verify user login with valid credentials</h5>\n<span class='badge badge-success'>09.03.2024 9:50:46 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:50:46 PM</span>\n<span class='badge badge-default'>00:00:00:742</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:50:46 PM</td>\n        <td>\n          User is able to login successfully: \n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"7\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Validate navigation to dashboard from branch selection page</p>\n            <p class=\"text-sm\">\n              <span>9:50:46 PM</span> / <span>00:00:01:577</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Validate navigation to dashboard from branch selection page</h5>\n<span class='badge badge-success'>09.03.2024 9:50:46 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:50:48 PM</span>\n<span class='badge badge-default'>00:00:01:577</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:50:48 PM</td>\n        <td>\n          Successfully navigated from branch selction page to Dashboard\n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"8\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Validate navigation to Customer 360 page from Dashboard page</p>\n            <p class=\"text-sm\">\n              <span>9:50:48 PM</span> / <span>00:00:00:170</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Validate navigation to Customer 360 page from Dashboard page</h5>\n<span class='badge badge-success'>09.03.2024 9:50:48 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:50:48 PM</span>\n<span class='badge badge-default'>00:00:00:170</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:50:48 PM</td>\n        <td>\n          Successfully navigated from Dashboard page to Customer 360 page\n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"9\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Validate navigation to Customer 360 page from Dashboard page</p>\n            <p class=\"text-sm\">\n              <span>9:50:48 PM</span> / <span>00:00:01:872</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Validate navigation to Customer 360 page from Dashboard page</h5>\n<span class='badge badge-success'>09.03.2024 9:50:48 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:50:50 PM</span>\n<span class='badge badge-default'>00:00:01:872</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:50:50 PM</td>\n        <td>\n          Successfully navigated from Dashboard page to Customer 360 page\n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"10\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Dedupe- Validating the senario when First name is empty </p>\n            <p class=\"text-sm\">\n              <span>9:50:50 PM</span> / <span>00:00:02:551</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Dedupe- Validating the senario when First name is empty </h5>\n<span class='badge badge-success'>09.03.2024 9:50:50 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:50:53 PM</span>\n<span class='badge badge-default'>00:00:02:551</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:50:53 PM</td>\n        <td>\n          Validation first name error message when first name is empty \n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"11\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Dedupe- Validating the senario when Last name is empty </p>\n            <p class=\"text-sm\">\n              <span>9:50:53 PM</span> / <span>00:00:02:877</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Dedupe- Validating the senario when Last name is empty </h5>\n<span class='badge badge-success'>09.03.2024 9:50:53 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:50:56 PM</span>\n<span class='badge badge-default'>00:00:02:877</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:50:56 PM</td>\n        <td>\n          Validation last name error message when  last name is empty \n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"12\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Dedupe- Validating the senario when Father name is empty </p>\n            <p class=\"text-sm\">\n              <span>9:50:56 PM</span> / <span>00:00:02:867</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Dedupe- Validating the senario when Father name is empty </h5>\n<span class='badge badge-success'>09.03.2024 9:50:56 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:50:59 PM</span>\n<span class='badge badge-default'>00:00:02:867</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:50:59 PM</td>\n        <td>\n          Validation error message when  father name is empty \n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"13\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Dedupe- Validating the senario when DOB is empty </p>\n            <p class=\"text-sm\">\n              <span>9:50:59 PM</span> / <span>00:00:00:862</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Dedupe- Validating the senario when DOB is empty </h5>\n<span class='badge badge-success'>09.03.2024 9:50:59 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:51:00 PM</span>\n<span class='badge badge-default'>00:00:00:862</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:51:00 PM</td>\n        <td>\n          Validation  error message when mobile  is empty \n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"14\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Dedupe- Validating the senario when Mobile number is empty </p>\n            <p class=\"text-sm\">\n              <span>9:51:00 PM</span> / <span>00:00:02:818</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Dedupe- Validating the senario when Mobile number is empty </h5>\n<span class='badge badge-success'>09.03.2024 9:51:00 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:51:03 PM</span>\n<span class='badge badge-default'>00:00:02:818</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:51:03 PM</td>\n        <td>\n          Validation  error message when mobile  is empty \n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"15\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Dedupe- Validating the senario when Invalid Mobile number is passed</p>\n            <p class=\"text-sm\">\n              <span>9:51:03 PM</span> / <span>00:00:03:370</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Dedupe- Validating the senario when Invalid Mobile number is passed</h5>\n<span class='badge badge-success'>09.03.2024 9:51:03 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:51:06 PM</span>\n<span class='badge badge-default'>00:00:03:370</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:51:06 PM</td>\n        <td>\n          Validation  error message when mobile  is incorrect\n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"16\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Dedupe- Validating the senario when Mobile number less than 10 digit is passed</p>\n            <p class=\"text-sm\">\n              <span>9:51:06 PM</span> / <span>00:00:03:254</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Dedupe- Validating the senario when Mobile number less than 10 digit is passed</h5>\n<span class='badge badge-success'>09.03.2024 9:51:06 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:51:09 PM</span>\n<span class='badge badge-default'>00:00:03:254</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:51:09 PM</td>\n        <td>\n          Validation  error message when mobile  is incorrect\n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"17\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Dedupe- Validating the senario when Mobile number more than 10 digit is passed</p>\n            <p class=\"text-sm\">\n              <span>9:51:10 PM</span> / <span>00:00:03:217</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Dedupe- Validating the senario when Mobile number more than 10 digit is passed</h5>\n<span class='badge badge-success'>09.03.2024 9:51:10 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:51:13 PM</span>\n<span class='badge badge-default'>00:00:03:217</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:51:13 PM</td>\n        <td>\n          Validation  error message when mobile  is incorrect\n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"18\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Dedupe- Validating the Senario when Invalid PAN Number is passed</p>\n            <p class=\"text-sm\">\n              <span>9:51:13 PM</span> / <span>00:00:02:736</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Dedupe- Validating the Senario when Invalid PAN Number is passed</h5>\n<span class='badge badge-success'>09.03.2024 9:51:13 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:51:16 PM</span>\n<span class='badge badge-default'>00:00:02:736</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:51:16 PM</td>\n        <td>\n          Validation  error message when mobile  is empty \n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"19\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Dedupe- Validating the positive senario of Customer dedupe</p>\n            <p class=\"text-sm\">\n              <span>9:51:16 PM</span> / <span>00:00:35:756</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Dedupe- Validating the positive senario of Customer dedupe</h5>\n<span class='badge badge-success'>09.03.2024 9:51:16 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:51:51 PM</span>\n<span class='badge badge-default'>00:00:35:756</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:51:51 PM</td>\n        <td>\n          Validation the Positive Journey of Customer dedupe\n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"20\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Validate if offline button is enable after biometric faliure</p>\n            <p class=\"text-sm\">\n              <span>9:52:32 PM</span> / <span>00:00:00:030</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Validate if offline button is enable after biometric faliure</h5>\n<span class='badge badge-success'>09.03.2024 9:52:32 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:52:32 PM</span>\n<span class='badge badge-default'>00:00:00:030</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:52:32 PM</td>\n        <td>\n          Successfully offile button is enable\n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"21\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">KYC- Validating the Positive Journey of customer KYC.</p>\n            <p class=\"text-sm\">\n              <span>9:52:33 PM</span> / <span>00:01:20:096</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">KYC- Validating the Positive Journey of customer KYC.</h5>\n<span class='badge badge-success'>09.03.2024 9:52:33 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:53:53 PM</span>\n<span class='badge badge-default'>00:01:20:096</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div><div class=\"detail-body mt-4\">\n<table class=\"table table-sm\">\n  <thead><tr><th class=\"status-col\">Status</th><th class=\"timestamp-col\">Timestamp</th><th class=\"details-col\">Details</th></tr></thead>\n  <tbody>\n      <tr class=\"event-row\">\n        <td><span class=\"badge log pass-bg\">Pass</span></td>\n        <td>9:53:53 PM</td>\n        <td>\n          Successfully completed the customer KYC journey \n        </td>\n      </tr>\n  </tbody>\n</table>\n</div>\n          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"22\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Validating the positive journey</p>\n            <p class=\"text-sm\">\n              <span>9:53:53 PM</span> / <span>00:00:00:000</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Validating the positive journey</h5>\n<span class='badge badge-success'>09.03.2024 9:53:53 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:53:53 PM</span>\n<span class='badge badge-default'>00:00:00:000</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div>          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"23\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Validating Positive Journey of Customer Employment</p>\n            <p class=\"text-sm\">\n              <span>9:53:57 PM</span> / <span>00:00:00:000</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Validating Positive Journey of Customer Employment</h5>\n<span class='badge badge-success'>09.03.2024 9:53:57 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:53:57 PM</span>\n<span class='badge badge-default'>00:00:00:000</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div>          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"24\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Nominee Validating Postive senario</p>\n            <p class=\"text-sm\">\n              <span>9:53:59 PM</span> / <span>00:00:00:000</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Nominee Validating Postive senario</h5>\n<span class='badge badge-success'>09.03.2024 9:53:59 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:53:59 PM</span>\n<span class='badge badge-default'>00:00:00:000</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div>          </div>\n        </li>\n        <li class=\"test-item\"  status=\"pass\" test-id=\"25\"\n          author=\"\"\n          tag=\"\"\n          device=\"\">\n          <div class=\"test-detail\">\n            <p class=\"name\">Validating Positive senario</p>\n            <p class=\"text-sm\">\n              <span>9:54:03 PM</span> / <span>00:00:00:000</span>\n              <span class=\"badge pass-bg log float-right\">Pass</span>\n            </p>\n          </div>\n          <div class=\"test-contents d-none\">\n<div class=\"detail-head\">\n<div class=\"p-v-10\">\n<div class=\"info\">\n<h5 class=\"test-status text-pass\">Validating Positive senario</h5>\n<span class='badge badge-success'>09.03.2024 9:54:03 PM</span>\n<span class='badge badge-danger'>09.03.2024 9:54:03 PM</span>\n<span class='badge badge-default'>00:00:00:000</span>\n&middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>\n<span class='badge badge-default pointer float-right ml-1 et'><i class=\"fa fa-chevron-down\"></i></span>\n<span class='badge badge-default pointer float-right ct'><i class=\"fa fa-chevron-up\"></i></span>\n</div>\n</div>\n</div>          </div>\n        </li>\n      </ul>\n    </div>\n  </div>\n<div class=\"test-content scrollable\">\n<div class=\"test-content-tools\">\n<ul><li><a class=\"back-to-test\" href=\"#\"><i class=\"fa fa-arrow-left\"></i></a></li></ul>\n</div>\n<div class=\"test-content-detail\"><div class=\"detail-body\"></div></div>\n</div></div>\n<div class=\"container-fluid p-4 view dashboard-view\">\n<div class=\"row\">\n<div class=\"col-md-3\">\n<div class=\"card\"><div class=\"card-body\">\n<p class=\"m-b-0\">Started</p>\n<h3>Sep 3, 2024 09:50:35 PM</h3>\n</div></div>\n</div>\n<div class=\"col-md-3\">\n<div class=\"card\"><div class=\"card-body\">\n<p class=\"m-b-0\">Ended</p>\n<h3>Sep 3, 2024 09:54:42 PM</h3>\n</div></div>\n</div>\n<div class=\"col-md-3\">\n<div class=\"card\"><div class=\"card-body\">\n<p class=\"m-b-0 text-pass\">Tests Passed</p>\n<h3>25</h3>\n</div></div>\n</div>\n<div class=\"col-md-3\">\n<div class=\"card\"><div class=\"card-body\">\n<p class=\"m-b-0 text-fail\">Tests Failed</p>\n<h3>0</h3>\n</div></div>\n</div>\n</div>\n<div class=\"row\">\n<div class=\"col-md-6\">\n<div class=\"card\">\n<div class=\"card-header\">\n<h6 class=\"card-title\">Tests</h6>\n</div>\n<div class=\"card-body\">\n<div class=\"\">\n<canvas id='parent-analysis' width='115' height='90'></canvas>\n</div>\n</div>\n<div class=\"card-footer\">\n<div><small data-tooltip='100%'>\n<b>25</b> tests passed\n</small>\n</div>\n<div>\n<small data-tooltip='0%'><b>0</b> tests failed,\n<b>0</b> skipped, <b data-tooltip='0%'>0</b> others\n</small>\n</div>\n</div>\n</div>\n</div>\n<div class=\"col-md-6\">\n<div class=\"card\">\n<div class=\"card-header\">\n<h6 class=\"card-title\">Log events</h6>\n</div>\n<div class=\"card-body\">\n<div class=\"\">\n<canvas id='events-analysis' width='115' height='90'></canvas>\n</div>\n</div>\n<div class=\"card-footer\">\n<div><small data-tooltip='100%'><b>21</b> events passed</small></div>\n<div>\n<small data-tooltip='0%'><b>0</b> events failed,\n<b data-tooltip='%'>0</b> others\n</small>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"row\"><div class=\"col-md-12\">\n<div class=\"card\"><div class=\"card-header\"><p>Timeline</p></div>\n<div class=\"card-body pt-0\"><div>\n<canvas id=\"timeline\" height=\"120\"></canvas>\n</div></div>\n</div>\n</div></div>\n<script>\nvar timeline = {\n\"Verify user login with blank email Id\":0.54,\"Verify user login with blank password\":0.334,\"Verify user login with invalid Email and Pass\":2.039,\"Verify user login with Valid Email and Invalid Pass\":1.036,\"Verify user login with Invalid Email and valid Pass\":1.216,\"Verify user login with valid credentials\":0.742,\"Validate navigation to dashboard from branch selection page\":1.577,\"Validate navigation to Customer 360 page from Dashboard page\":0.17,\"Validate navigation to Customer 360 page from Dashboard page\":1.872,\"Dedupe- Validating the senario when First name is empty \":2.551,\"Dedupe- Validating the senario when Last name is empty \":2.877,\"Dedupe- Validating the senario when Father name is empty \":2.867,\"Dedupe- Validating the senario when DOB is empty \":0.862,\"Dedupe- Validating the senario when Mobile number is empty \":2.818,\"Dedupe- Validating the senario when Invalid Mobile number is passed\":3.37,\"Dedupe- Validating the senario when Mobile number less than 10 digit is passed\":3.254,\"Dedupe- Validating the senario when Mobile number more than 10 digit is passed\":3.217,\"Dedupe- Validating the Senario when Invalid PAN Number is passed\":2.736,\"Dedupe- Validating the positive senario of Customer dedupe\":35.756,\"Validate if offline button is enable after biometric faliure\":0.03,\"KYC- Validating the Positive Journey of customer KYC.\":80.096,\"Validating the positive journey\":0,\"Validating Positive Journey of Customer Employment\":0,\"Nominee Validating Postive senario\":0,\"Validating Positive senario\":0\n};\n</script>\n<div class=\"row\">\n</div>\n</div>\n<script>\nvar statusGroup = {\nparentCount: 5,\npassParent: 25,\nfailParent: 0,\nwarningParent: 0,\nskipParent: 0,\nchildCount: 5,\npassChild: 0,\nfailChild: 0,\nwarningChild: 0,\nskipChild: 0,\ninfoChild: 0,\ngrandChildCount: 5,\npassGrandChild: 0,\nfailGrandChild: 0,\nwarningGrandChild: 0,\nskipGrandChild: 0,\ninfoGrandChild: 0,\neventsCount: 5,\npassEvents: 21,\nfailEvents: 0,\nwarningEvents: 0,\nskipEvents: 0,\ninfoEvents: 0\n};\n</script>        </div>\n      </div>\n    </div>\n  </div>\n<script src=\"https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js\"></script>\n<script type=\"text/javascript\"></script></body>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/ExtentReport.html b/ExtentReport.html
+--- a/ExtentReport.html	(revision cf552da88453699fbcef77c81731050a7b46b9ae)
++++ b/ExtentReport.html	(date 1732000351273)
+@@ -35,7 +35,7 @@
+ <a href="#"><span class="badge badge-primary">Automation Test Results</span></a>
+ </li>
+ <li class="m-r-10">
+-<a href="#"><span class="badge badge-primary">Sep 3, 2024 09:50:35 PM</span></a>
++<a href="#"><span class="badge badge-primary">Nov 19, 2024 12:20:22 pm</span></a>
+ </li>
+ </ul>
+ </div>
+@@ -81,7 +81,7 @@
+           <div class="test-detail">
+             <p class="name">Verify user login with blank email Id</p>
+             <p class="text-sm">
+-              <span>9:50:39 PM</span> / <span>00:00:00:540</span>
++              <span>12:20:29 pm</span> / <span>00:00:00:368</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -90,9 +90,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Verify user login with blank email Id</h5>
+-<span class='badge badge-success'>09.03.2024 9:50:39 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:50:40 PM</span>
+-<span class='badge badge-default'>00:00:00:540</span>
++<span class='badge badge-success'>11.19.2024 12:20:29 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:29 pm</span>
++<span class='badge badge-default'>00:00:00:368</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -104,7 +104,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:50:40 PM</td>
++        <td>12:20:29 pm</td>
+         <td>
+           Validation message validated successfully for empty email
+         </td>
+@@ -121,7 +121,7 @@
+           <div class="test-detail">
+             <p class="name">Verify user login with blank password</p>
+             <p class="text-sm">
+-              <span>9:50:40 PM</span> / <span>00:00:00:334</span>
++              <span>12:20:30 pm</span> / <span>00:00:00:149</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -130,9 +130,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Verify user login with blank password</h5>
+-<span class='badge badge-success'>09.03.2024 9:50:40 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:50:41 PM</span>
+-<span class='badge badge-default'>00:00:00:334</span>
++<span class='badge badge-success'>11.19.2024 12:20:30 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:30 pm</span>
++<span class='badge badge-default'>00:00:00:149</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -144,7 +144,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:50:41 PM</td>
++        <td>12:20:30 pm</td>
+         <td>
+           Validation message validated successfully for empty Password
+         </td>
+@@ -161,7 +161,7 @@
+           <div class="test-detail">
+             <p class="name">Verify user login with invalid Email and Pass</p>
+             <p class="text-sm">
+-              <span>9:50:41 PM</span> / <span>00:00:02:039</span>
++              <span>12:20:30 pm</span> / <span>00:00:00:908</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -170,9 +170,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Verify user login with invalid Email and Pass</h5>
+-<span class='badge badge-success'>09.03.2024 9:50:41 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:50:43 PM</span>
+-<span class='badge badge-default'>00:00:02:039</span>
++<span class='badge badge-success'>11.19.2024 12:20:30 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:31 pm</span>
++<span class='badge badge-default'>00:00:00:908</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -184,7 +184,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:50:43 PM</td>
++        <td>12:20:31 pm</td>
+         <td>
+           Validation message validated successfully for invalid email and pass
+         </td>
+@@ -201,7 +201,7 @@
+           <div class="test-detail">
+             <p class="name">Verify user login with Valid Email and Invalid Pass</p>
+             <p class="text-sm">
+-              <span>9:50:43 PM</span> / <span>00:00:01:036</span>
++              <span>12:20:31 pm</span> / <span>00:00:00:317</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -210,9 +210,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Verify user login with Valid Email and Invalid Pass</h5>
+-<span class='badge badge-success'>09.03.2024 9:50:43 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:50:44 PM</span>
+-<span class='badge badge-default'>00:00:01:036</span>
++<span class='badge badge-success'>11.19.2024 12:20:31 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:31 pm</span>
++<span class='badge badge-default'>00:00:00:317</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -224,7 +224,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:50:44 PM</td>
++        <td>12:20:31 pm</td>
+         <td>
+           Validation message validated successfully for invalid email and pass
+         </td>
+@@ -241,7 +241,7 @@
+           <div class="test-detail">
+             <p class="name">Verify user login with Invalid Email and valid Pass</p>
+             <p class="text-sm">
+-              <span>9:50:44 PM</span> / <span>00:00:01:216</span>
++              <span>12:20:31 pm</span> / <span>00:00:01:340</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -250,9 +250,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Verify user login with Invalid Email and valid Pass</h5>
+-<span class='badge badge-success'>09.03.2024 9:50:44 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:50:45 PM</span>
+-<span class='badge badge-default'>00:00:01:216</span>
++<span class='badge badge-success'>11.19.2024 12:20:31 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:33 pm</span>
++<span class='badge badge-default'>00:00:01:340</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -264,7 +264,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:50:45 PM</td>
++        <td>12:20:33 pm</td>
+         <td>
+           Validation message validated successfully for invalid email and pass
+         </td>
+@@ -281,7 +281,7 @@
+           <div class="test-detail">
+             <p class="name">Verify user login with valid credentials</p>
+             <p class="text-sm">
+-              <span>9:50:46 PM</span> / <span>00:00:00:742</span>
++              <span>12:20:33 pm</span> / <span>00:00:00:351</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -290,9 +290,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Verify user login with valid credentials</h5>
+-<span class='badge badge-success'>09.03.2024 9:50:46 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:50:46 PM</span>
+-<span class='badge badge-default'>00:00:00:742</span>
++<span class='badge badge-success'>11.19.2024 12:20:33 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:33 pm</span>
++<span class='badge badge-default'>00:00:00:351</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -304,7 +304,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:50:46 PM</td>
++        <td>12:20:33 pm</td>
+         <td>
+           User is able to login successfully: 
+         </td>
+@@ -321,7 +321,7 @@
+           <div class="test-detail">
+             <p class="name">Validate navigation to dashboard from branch selection page</p>
+             <p class="text-sm">
+-              <span>9:50:46 PM</span> / <span>00:00:01:577</span>
++              <span>12:20:33 pm</span> / <span>00:00:01:512</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -330,9 +330,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Validate navigation to dashboard from branch selection page</h5>
+-<span class='badge badge-success'>09.03.2024 9:50:46 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:50:48 PM</span>
+-<span class='badge badge-default'>00:00:01:577</span>
++<span class='badge badge-success'>11.19.2024 12:20:33 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:35 pm</span>
++<span class='badge badge-default'>00:00:01:512</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -344,7 +344,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:50:48 PM</td>
++        <td>12:20:35 pm</td>
+         <td>
+           Successfully navigated from branch selction page to Dashboard
+         </td>
+@@ -361,7 +361,7 @@
+           <div class="test-detail">
+             <p class="name">Validate navigation to Customer 360 page from Dashboard page</p>
+             <p class="text-sm">
+-              <span>9:50:48 PM</span> / <span>00:00:00:170</span>
++              <span>12:20:35 pm</span> / <span>00:00:00:180</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -370,9 +370,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Validate navigation to Customer 360 page from Dashboard page</h5>
+-<span class='badge badge-success'>09.03.2024 9:50:48 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:50:48 PM</span>
+-<span class='badge badge-default'>00:00:00:170</span>
++<span class='badge badge-success'>11.19.2024 12:20:35 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:35 pm</span>
++<span class='badge badge-default'>00:00:00:180</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -384,7 +384,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:50:48 PM</td>
++        <td>12:20:35 pm</td>
+         <td>
+           Successfully navigated from Dashboard page to Customer 360 page
+         </td>
+@@ -401,7 +401,7 @@
+           <div class="test-detail">
+             <p class="name">Validate navigation to Customer 360 page from Dashboard page</p>
+             <p class="text-sm">
+-              <span>9:50:48 PM</span> / <span>00:00:01:872</span>
++              <span>12:20:35 pm</span> / <span>00:00:01:799</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -410,9 +410,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Validate navigation to Customer 360 page from Dashboard page</h5>
+-<span class='badge badge-success'>09.03.2024 9:50:48 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:50:50 PM</span>
+-<span class='badge badge-default'>00:00:01:872</span>
++<span class='badge badge-success'>11.19.2024 12:20:35 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:37 pm</span>
++<span class='badge badge-default'>00:00:01:799</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -424,7 +424,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:50:50 PM</td>
++        <td>12:20:37 pm</td>
+         <td>
+           Successfully navigated from Dashboard page to Customer 360 page
+         </td>
+@@ -441,7 +441,7 @@
+           <div class="test-detail">
+             <p class="name">Dedupe- Validating the senario when First name is empty </p>
+             <p class="text-sm">
+-              <span>9:50:50 PM</span> / <span>00:00:02:551</span>
++              <span>12:20:37 pm</span> / <span>00:00:01:640</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -450,9 +450,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Dedupe- Validating the senario when First name is empty </h5>
+-<span class='badge badge-success'>09.03.2024 9:50:50 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:50:53 PM</span>
+-<span class='badge badge-default'>00:00:02:551</span>
++<span class='badge badge-success'>11.19.2024 12:20:37 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:38 pm</span>
++<span class='badge badge-default'>00:00:01:640</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -464,7 +464,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:50:53 PM</td>
++        <td>12:20:38 pm</td>
+         <td>
+           Validation first name error message when first name is empty 
+         </td>
+@@ -481,7 +481,7 @@
+           <div class="test-detail">
+             <p class="name">Dedupe- Validating the senario when Last name is empty </p>
+             <p class="text-sm">
+-              <span>9:50:53 PM</span> / <span>00:00:02:877</span>
++              <span>12:20:39 pm</span> / <span>00:00:02:119</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -490,9 +490,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Dedupe- Validating the senario when Last name is empty </h5>
+-<span class='badge badge-success'>09.03.2024 9:50:53 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:50:56 PM</span>
+-<span class='badge badge-default'>00:00:02:877</span>
++<span class='badge badge-success'>11.19.2024 12:20:39 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:41 pm</span>
++<span class='badge badge-default'>00:00:02:119</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -504,7 +504,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:50:56 PM</td>
++        <td>12:20:41 pm</td>
+         <td>
+           Validation last name error message when  last name is empty 
+         </td>
+@@ -521,7 +521,7 @@
+           <div class="test-detail">
+             <p class="name">Dedupe- Validating the senario when Father name is empty </p>
+             <p class="text-sm">
+-              <span>9:50:56 PM</span> / <span>00:00:02:867</span>
++              <span>12:20:41 pm</span> / <span>00:00:02:108</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -530,9 +530,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Dedupe- Validating the senario when Father name is empty </h5>
+-<span class='badge badge-success'>09.03.2024 9:50:56 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:50:59 PM</span>
+-<span class='badge badge-default'>00:00:02:867</span>
++<span class='badge badge-success'>11.19.2024 12:20:41 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:43 pm</span>
++<span class='badge badge-default'>00:00:02:108</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -544,7 +544,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:50:59 PM</td>
++        <td>12:20:43 pm</td>
+         <td>
+           Validation error message when  father name is empty 
+         </td>
+@@ -561,7 +561,7 @@
+           <div class="test-detail">
+             <p class="name">Dedupe- Validating the senario when DOB is empty </p>
+             <p class="text-sm">
+-              <span>9:50:59 PM</span> / <span>00:00:00:862</span>
++              <span>12:20:43 pm</span> / <span>00:00:00:307</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -570,9 +570,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Dedupe- Validating the senario when DOB is empty </h5>
+-<span class='badge badge-success'>09.03.2024 9:50:59 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:51:00 PM</span>
+-<span class='badge badge-default'>00:00:00:862</span>
++<span class='badge badge-success'>11.19.2024 12:20:43 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:43 pm</span>
++<span class='badge badge-default'>00:00:00:307</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -584,7 +584,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:51:00 PM</td>
++        <td>12:20:43 pm</td>
+         <td>
+           Validation  error message when mobile  is empty 
+         </td>
+@@ -601,7 +601,7 @@
+           <div class="test-detail">
+             <p class="name">Dedupe- Validating the senario when Mobile number is empty </p>
+             <p class="text-sm">
+-              <span>9:51:00 PM</span> / <span>00:00:02:818</span>
++              <span>12:20:43 pm</span> / <span>00:00:02:113</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -610,9 +610,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Dedupe- Validating the senario when Mobile number is empty </h5>
+-<span class='badge badge-success'>09.03.2024 9:51:00 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:51:03 PM</span>
+-<span class='badge badge-default'>00:00:02:818</span>
++<span class='badge badge-success'>11.19.2024 12:20:43 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:45 pm</span>
++<span class='badge badge-default'>00:00:02:113</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -624,7 +624,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:51:03 PM</td>
++        <td>12:20:45 pm</td>
+         <td>
+           Validation  error message when mobile  is empty 
+         </td>
+@@ -641,7 +641,7 @@
+           <div class="test-detail">
+             <p class="name">Dedupe- Validating the senario when Invalid Mobile number is passed</p>
+             <p class="text-sm">
+-              <span>9:51:03 PM</span> / <span>00:00:03:370</span>
++              <span>12:20:45 pm</span> / <span>00:00:02:630</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -650,9 +650,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Dedupe- Validating the senario when Invalid Mobile number is passed</h5>
+-<span class='badge badge-success'>09.03.2024 9:51:03 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:51:06 PM</span>
+-<span class='badge badge-default'>00:00:03:370</span>
++<span class='badge badge-success'>11.19.2024 12:20:45 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:48 pm</span>
++<span class='badge badge-default'>00:00:02:630</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -664,7 +664,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:51:06 PM</td>
++        <td>12:20:48 pm</td>
+         <td>
+           Validation  error message when mobile  is incorrect
+         </td>
+@@ -681,7 +681,7 @@
+           <div class="test-detail">
+             <p class="name">Dedupe- Validating the senario when Mobile number less than 10 digit is passed</p>
+             <p class="text-sm">
+-              <span>9:51:06 PM</span> / <span>00:00:03:254</span>
++              <span>12:20:48 pm</span> / <span>00:00:02:589</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -690,9 +690,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Dedupe- Validating the senario when Mobile number less than 10 digit is passed</h5>
+-<span class='badge badge-success'>09.03.2024 9:51:06 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:51:09 PM</span>
+-<span class='badge badge-default'>00:00:03:254</span>
++<span class='badge badge-success'>11.19.2024 12:20:48 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:51 pm</span>
++<span class='badge badge-default'>00:00:02:589</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -704,7 +704,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:51:09 PM</td>
++        <td>12:20:51 pm</td>
+         <td>
+           Validation  error message when mobile  is incorrect
+         </td>
+@@ -721,7 +721,7 @@
+           <div class="test-detail">
+             <p class="name">Dedupe- Validating the senario when Mobile number more than 10 digit is passed</p>
+             <p class="text-sm">
+-              <span>9:51:10 PM</span> / <span>00:00:03:217</span>
++              <span>12:20:51 pm</span> / <span>00:00:02:644</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -730,9 +730,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Dedupe- Validating the senario when Mobile number more than 10 digit is passed</h5>
+-<span class='badge badge-success'>09.03.2024 9:51:10 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:51:13 PM</span>
+-<span class='badge badge-default'>00:00:03:217</span>
++<span class='badge badge-success'>11.19.2024 12:20:51 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:53 pm</span>
++<span class='badge badge-default'>00:00:02:644</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -744,7 +744,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:51:13 PM</td>
++        <td>12:20:53 pm</td>
+         <td>
+           Validation  error message when mobile  is incorrect
+         </td>
+@@ -761,7 +761,7 @@
+           <div class="test-detail">
+             <p class="name">Dedupe- Validating the Senario when Invalid PAN Number is passed</p>
+             <p class="text-sm">
+-              <span>9:51:13 PM</span> / <span>00:00:02:736</span>
++              <span>12:20:53 pm</span> / <span>00:00:02:136</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -770,9 +770,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Dedupe- Validating the Senario when Invalid PAN Number is passed</h5>
+-<span class='badge badge-success'>09.03.2024 9:51:13 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:51:16 PM</span>
+-<span class='badge badge-default'>00:00:02:736</span>
++<span class='badge badge-success'>11.19.2024 12:20:53 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:20:56 pm</span>
++<span class='badge badge-default'>00:00:02:136</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -784,7 +784,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:51:16 PM</td>
++        <td>12:20:56 pm</td>
+         <td>
+           Validation  error message when mobile  is empty 
+         </td>
+@@ -801,7 +801,7 @@
+           <div class="test-detail">
+             <p class="name">Dedupe- Validating the positive senario of Customer dedupe</p>
+             <p class="text-sm">
+-              <span>9:51:16 PM</span> / <span>00:00:35:756</span>
++              <span>12:20:56 pm</span> / <span>00:00:13:988</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -810,9 +810,9 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Dedupe- Validating the positive senario of Customer dedupe</h5>
+-<span class='badge badge-success'>09.03.2024 9:51:16 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:51:51 PM</span>
+-<span class='badge badge-default'>00:00:35:756</span>
++<span class='badge badge-success'>11.19.2024 12:20:56 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:21:10 pm</span>
++<span class='badge badge-default'>00:00:13:988</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+@@ -824,7 +824,7 @@
+   <tbody>
+       <tr class="event-row">
+         <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:51:51 PM</td>
++        <td>12:21:10 pm</td>
+         <td>
+           Validation the Positive Journey of Customer dedupe
+         </td>
+@@ -839,9 +839,9 @@
+           tag=""
+           device="">
+           <div class="test-detail">
+-            <p class="name">Validate if offline button is enable after biometric faliure</p>
++            <p class="name">KYC- Validating the Positive Journey of customer KYC.</p>
+             <p class="text-sm">
+-              <span>9:52:32 PM</span> / <span>00:00:00:030</span>
++              <span>12:23:51 pm</span> / <span>00:00:00:000</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -849,79 +849,25 @@
+ <div class="detail-head">
+ <div class="p-v-10">
+ <div class="info">
+-<h5 class="test-status text-pass">Validate if offline button is enable after biometric faliure</h5>
+-<span class='badge badge-success'>09.03.2024 9:52:32 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:52:32 PM</span>
+-<span class='badge badge-default'>00:00:00:030</span>
++<h5 class="test-status text-pass">KYC- Validating the Positive Journey of customer KYC.</h5>
++<span class='badge badge-success'>11.19.2024 12:23:51 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:23:51 pm</span>
++<span class='badge badge-default'>00:00:00:000</span>
+ &middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+ </div>
+ </div>
+-</div><div class="detail-body mt-4">
+-<table class="table table-sm">
+-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+-  <tbody>
+-      <tr class="event-row">
+-        <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:52:32 PM</td>
+-        <td>
+-          Successfully offile button is enable
+-        </td>
+-      </tr>
+-  </tbody>
+-</table>
+-</div>
+-          </div>
++</div>          </div>
+         </li>
+         <li class="test-item"  status="pass" test-id="21"
+           author=""
+           tag=""
+           device="">
+           <div class="test-detail">
+-            <p class="name">KYC- Validating the Positive Journey of customer KYC.</p>
+-            <p class="text-sm">
+-              <span>9:52:33 PM</span> / <span>00:01:20:096</span>
+-              <span class="badge pass-bg log float-right">Pass</span>
+-            </p>
+-          </div>
+-          <div class="test-contents d-none">
+-<div class="detail-head">
+-<div class="p-v-10">
+-<div class="info">
+-<h5 class="test-status text-pass">KYC- Validating the Positive Journey of customer KYC.</h5>
+-<span class='badge badge-success'>09.03.2024 9:52:33 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:53:53 PM</span>
+-<span class='badge badge-default'>00:01:20:096</span>
+-&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+-</div>
+-</div>
+-</div><div class="detail-body mt-4">
+-<table class="table table-sm">
+-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+-  <tbody>
+-      <tr class="event-row">
+-        <td><span class="badge log pass-bg">Pass</span></td>
+-        <td>9:53:53 PM</td>
+-        <td>
+-          Successfully completed the customer KYC journey 
+-        </td>
+-      </tr>
+-  </tbody>
+-</table>
+-</div>
+-          </div>
+-        </li>
+-        <li class="test-item"  status="pass" test-id="22"
+-          author=""
+-          tag=""
+-          device="">
+-          <div class="test-detail">
+             <p class="name">Validating the positive journey</p>
+             <p class="text-sm">
+-              <span>9:53:53 PM</span> / <span>00:00:00:000</span>
++              <span>12:26:31 pm</span> / <span>00:00:00:000</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -930,24 +876,24 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Validating the positive journey</h5>
+-<span class='badge badge-success'>09.03.2024 9:53:53 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:53:53 PM</span>
++<span class='badge badge-success'>11.19.2024 12:26:31 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:26:31 pm</span>
+ <span class='badge badge-default'>00:00:00:000</span>
+-&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
++&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+ </div>
+ </div>
+ </div>          </div>
+         </li>
+-        <li class="test-item"  status="pass" test-id="23"
++        <li class="test-item"  status="pass" test-id="22"
+           author=""
+           tag=""
+           device="">
+           <div class="test-detail">
+             <p class="name">Validating Positive Journey of Customer Employment</p>
+             <p class="text-sm">
+-              <span>9:53:57 PM</span> / <span>00:00:00:000</span>
++              <span>12:29:10 pm</span> / <span>00:00:00:000</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -956,24 +902,24 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Validating Positive Journey of Customer Employment</h5>
+-<span class='badge badge-success'>09.03.2024 9:53:57 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:53:57 PM</span>
++<span class='badge badge-success'>11.19.2024 12:29:10 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:29:10 pm</span>
+ <span class='badge badge-default'>00:00:00:000</span>
+-&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
++&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+ </div>
+ </div>
+ </div>          </div>
+         </li>
+-        <li class="test-item"  status="pass" test-id="24"
++        <li class="test-item"  status="pass" test-id="23"
+           author=""
+           tag=""
+           device="">
+           <div class="test-detail">
+             <p class="name">Nominee Validating Postive senario</p>
+             <p class="text-sm">
+-              <span>9:53:59 PM</span> / <span>00:00:00:000</span>
++              <span>12:34:30 pm</span> / <span>00:00:00:000</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -982,24 +928,24 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Nominee Validating Postive senario</h5>
+-<span class='badge badge-success'>09.03.2024 9:53:59 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:53:59 PM</span>
++<span class='badge badge-success'>11.19.2024 12:34:30 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:34:30 pm</span>
+ <span class='badge badge-default'>00:00:00:000</span>
+-&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
++&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+ </div>
+ </div>
+ </div>          </div>
+         </li>
+-        <li class="test-item"  status="pass" test-id="25"
++        <li class="test-item"  status="pass" test-id="24"
+           author=""
+           tag=""
+           device="">
+           <div class="test-detail">
+             <p class="name">Validating Positive senario</p>
+             <p class="text-sm">
+-              <span>9:54:03 PM</span> / <span>00:00:00:000</span>
++              <span>12:39:50 pm</span> / <span>00:00:00:000</span>
+               <span class="badge pass-bg log float-right">Pass</span>
+             </p>
+           </div>
+@@ -1008,10 +954,10 @@
+ <div class="p-v-10">
+ <div class="info">
+ <h5 class="test-status text-pass">Validating Positive senario</h5>
+-<span class='badge badge-success'>09.03.2024 9:54:03 PM</span>
+-<span class='badge badge-danger'>09.03.2024 9:54:03 PM</span>
++<span class='badge badge-success'>11.19.2024 12:39:50 pm</span>
++<span class='badge badge-danger'>11.19.2024 12:39:50 pm</span>
+ <span class='badge badge-default'>00:00:00:000</span>
+-&middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
++&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+ <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+ <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+ </div>
+@@ -1032,19 +978,19 @@
+ <div class="col-md-3">
+ <div class="card"><div class="card-body">
+ <p class="m-b-0">Started</p>
+-<h3>Sep 3, 2024 09:50:35 PM</h3>
++<h3>Nov 19, 2024 12:20:22 pm</h3>
+ </div></div>
+ </div>
+ <div class="col-md-3">
+ <div class="card"><div class="card-body">
+ <p class="m-b-0">Ended</p>
+-<h3>Sep 3, 2024 09:54:42 PM</h3>
++<h3>Nov 19, 2024 12:42:31 pm</h3>
+ </div></div>
+ </div>
+ <div class="col-md-3">
+ <div class="card"><div class="card-body">
+ <p class="m-b-0 text-pass">Tests Passed</p>
+-<h3>25</h3>
++<h3>24</h3>
+ </div></div>
+ </div>
+ <div class="col-md-3">
+@@ -1067,7 +1013,7 @@
+ </div>
+ <div class="card-footer">
+ <div><small data-tooltip='100%'>
+-<b>25</b> tests passed
++<b>24</b> tests passed
+ </small>
+ </div>
+ <div>
+@@ -1089,7 +1035,7 @@
+ </div>
+ </div>
+ <div class="card-footer">
+-<div><small data-tooltip='100%'><b>21</b> events passed</small></div>
++<div><small data-tooltip='100%'><b>19</b> events passed</small></div>
+ <div>
+ <small data-tooltip='0%'><b>0</b> events failed,
+ <b data-tooltip='%'>0</b> others
+@@ -1108,7 +1054,7 @@
+ </div></div>
+ <script>
+ var timeline = {
+-"Verify user login with blank email Id":0.54,"Verify user login with blank password":0.334,"Verify user login with invalid Email and Pass":2.039,"Verify user login with Valid Email and Invalid Pass":1.036,"Verify user login with Invalid Email and valid Pass":1.216,"Verify user login with valid credentials":0.742,"Validate navigation to dashboard from branch selection page":1.577,"Validate navigation to Customer 360 page from Dashboard page":0.17,"Validate navigation to Customer 360 page from Dashboard page":1.872,"Dedupe- Validating the senario when First name is empty ":2.551,"Dedupe- Validating the senario when Last name is empty ":2.877,"Dedupe- Validating the senario when Father name is empty ":2.867,"Dedupe- Validating the senario when DOB is empty ":0.862,"Dedupe- Validating the senario when Mobile number is empty ":2.818,"Dedupe- Validating the senario when Invalid Mobile number is passed":3.37,"Dedupe- Validating the senario when Mobile number less than 10 digit is passed":3.254,"Dedupe- Validating the senario when Mobile number more than 10 digit is passed":3.217,"Dedupe- Validating the Senario when Invalid PAN Number is passed":2.736,"Dedupe- Validating the positive senario of Customer dedupe":35.756,"Validate if offline button is enable after biometric faliure":0.03,"KYC- Validating the Positive Journey of customer KYC.":80.096,"Validating the positive journey":0,"Validating Positive Journey of Customer Employment":0,"Nominee Validating Postive senario":0,"Validating Positive senario":0
++"Verify user login with blank email Id":0.368,"Verify user login with blank password":0.149,"Verify user login with invalid Email and Pass":0.908,"Verify user login with Valid Email and Invalid Pass":0.317,"Verify user login with Invalid Email and valid Pass":1.34,"Verify user login with valid credentials":0.351,"Validate navigation to dashboard from branch selection page":1.512,"Validate navigation to Customer 360 page from Dashboard page":0.18,"Validate navigation to Customer 360 page from Dashboard page":1.799,"Dedupe- Validating the senario when First name is empty ":1.64,"Dedupe- Validating the senario when Last name is empty ":2.119,"Dedupe- Validating the senario when Father name is empty ":2.108,"Dedupe- Validating the senario when DOB is empty ":0.307,"Dedupe- Validating the senario when Mobile number is empty ":2.113,"Dedupe- Validating the senario when Invalid Mobile number is passed":2.63,"Dedupe- Validating the senario when Mobile number less than 10 digit is passed":2.589,"Dedupe- Validating the senario when Mobile number more than 10 digit is passed":2.644,"Dedupe- Validating the Senario when Invalid PAN Number is passed":2.136,"Dedupe- Validating the positive senario of Customer dedupe":13.988,"KYC- Validating the Positive Journey of customer KYC.":0,"Validating the positive journey":0,"Validating Positive Journey of Customer Employment":0,"Nominee Validating Postive senario":0,"Validating Positive senario":0
+ };
+ </script>
+ <div class="row">
+@@ -1117,7 +1063,7 @@
+ <script>
+ var statusGroup = {
+ parentCount: 5,
+-passParent: 25,
++passParent: 24,
+ failParent: 0,
+ warningParent: 0,
+ skipParent: 0,
+@@ -1134,7 +1080,7 @@
+ skipGrandChild: 0,
+ infoGrandChild: 0,
+ eventsCount: 5,
+-passEvents: 21,
++passEvents: 19,
+ failEvents: 0,
+ warningEvents: 0,
+ skipEvents: 0,
+Index: testng.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE suite SYSTEM \"https://testng.org/testng-1.0.dtd\">\n<suite name=\"Suite\">\n\n\t<listeners>\n\t\t<listener class-name=\"listeners.ScreenshotListener\" />\t\t\t\t\t\n\t</listeners>\n\n\t<test thread-count=\"5\" name=\"chromeTest\">\n\t\t<parameter name=\"browser\" value=\"chrome\" />\n\n\t\t<classes>\n\t\t\t<class name=\"testcases.login.LoginTest\" />\n\t\t\t<class name=\"testcases.login.BranchListingTest\" />\n\t\t\t<class name=\"testcases.customer.dedupe.DedupeTest\" />\n\t\t\t\n\t\t\t<class name=\"testcases.customer.creation.KYCTest\" />\n\t\t\t<class name=\"testcases.customer.creation.PersonalInformationTest\" />\n\t\t\t<class name=\"testcases.customer.creation.EmploymentTest\" />\n\t\t\t<class name=\"testcases.customer.creation.OccupationTest\" />\n\t\t\t<class name=\"testcases.customer.creation.NomineeTest\" />\n\t\t\t<class name=\"testcases.customer.creation.RMTest\" />\n\t\t\t<class name=\"testcases.customer.creation.BankInformationTest\" />\n\t\t\t<class name=\"testcases.customer.creation.SendotpTest\" />\n\t\t\t\n\n\n\t\t</classes>\n\t</test> <!-- Test -->\n</suite> <!-- Suite -->\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/testng.xml b/testng.xml
+--- a/testng.xml	(revision cf552da88453699fbcef77c81731050a7b46b9ae)
++++ b/testng.xml	(date 1731999019136)
+@@ -6,23 +6,21 @@
+ 		<listener class-name="listeners.ScreenshotListener" />					
+ 	</listeners>
+ 
+-	<test thread-count="5" name="chromeTest">
++	<test thread-count="1" name="FirstTest">
+ 		<parameter name="browser" value="chrome" />
+ 
+ 		<classes>
+ 			<class name="testcases.login.LoginTest" />
+ 			<class name="testcases.login.BranchListingTest" />
+ 			<class name="testcases.customer.dedupe.DedupeTest" />
+-			
+-			<class name="testcases.customer.creation.KYCTest" />
++			 <class name="testcases.customer.creation.KYCTest" />
+ 			<class name="testcases.customer.creation.PersonalInformationTest" />
+-			<class name="testcases.customer.creation.EmploymentTest" />
++			 <class name="testcases.customer.creation.EmploymentTest" />
+ 			<class name="testcases.customer.creation.OccupationTest" />
+ 			<class name="testcases.customer.creation.NomineeTest" />
+ 			<class name="testcases.customer.creation.RMTest" />
+ 			<class name="testcases.customer.creation.BankInformationTest" />
+ 			<class name="testcases.customer.creation.SendotpTest" />
+-			
+ 
+ 
+ 		</classes>
+Index: src/main/java/property/PropertyFile.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package property;\n\nimport java.io.FileInputStream;\nimport java.io.FileNotFoundException;\nimport java.io.IOException;\nimport java.util.Properties;\n\npublic class PropertyFile {\n\tPropertyResources propReader = new PropertyResources();\n\tprivate String PROPERTY_CONFIG_PROPERTIES_QA = \"configQa.properties\";\n\tprivate String PROPERTY_CONFIG_PROPERTIES_PROD = \"configProd.properties\";\n\tprivate String PROPERTY_CONFIG_PROPERTIES_DEV = \"configDev.properties\";\n\tprivate Properties prop;\n\n\tString environment = propReader.getProp().getProperty(\"environment\").toString().trim();\n\tString qaEnvironment = \"qa\";\n\tString prodEnvironment = \"prod\";\n\tString devEnvironment = \"dev\";\n\n\tpublic PropertyFile() {\n\t\tif (environment.equals(qaEnvironment)) {\n\t\t\tFileInputStream ip = null;\n\t\t\ttry {\n\t\t\t\tprop = new Properties();\n\t\t\t\tip = new FileInputStream(PROPERTY_CONFIG_PROPERTIES_QA);\n\n\t\t\t\tprop.load(ip);\n\t\t\t} catch (FileNotFoundException e) {\n\t\t\t\te.printStackTrace();\n\t\t\t} catch (IOException e) {\n\t\t\t\te.printStackTrace();\n\t\t\t} finally {\n\t\t\t\tif (ip != null) {\n\t\t\t\t\ttry {\n\t\t\t\t\t\tip.close();\n\t\t\t\t\t} catch (IOException e) {\n\t\t\t\t\t\t// TODO Auto-generated catch block\n\t\t\t\t\t\te.printStackTrace();\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t} else if (environment.equals(prodEnvironment)) {\n\t\t\tFileInputStream ip = null;\n\t\t\ttry {\n\t\t\t\tprop = new Properties();\n\t\t\t\tip = new FileInputStream(PROPERTY_CONFIG_PROPERTIES_PROD);\n\n\t\t\t\tprop.load(ip);\n\t\t\t} catch (FileNotFoundException e) {\n\t\t\t\te.printStackTrace();\n\t\t\t} catch (IOException e) {\n\t\t\t\te.printStackTrace();\n\t\t\t} finally {\n\t\t\t\tif (ip != null) {\n\t\t\t\t\ttry {\n\t\t\t\t\t\tip.close();\n\t\t\t\t\t} catch (IOException e) {\n\t\t\t\t\t\t// TODO Auto-generated catch block\n\t\t\t\t\t\te.printStackTrace();\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\n\t\t} else if (environment.equals(devEnvironment)) {\n\t\t\tFileInputStream ip = null;\n\t\t\ttry {\n\t\t\t\tprop = new Properties();\n\t\t\t\tip = new FileInputStream(PROPERTY_CONFIG_PROPERTIES_DEV);\n\n\t\t\t\tprop.load(ip);\n\t\t\t} catch (FileNotFoundException e) {\n\t\t\t\te.printStackTrace();\n\t\t\t} catch (IOException e) {\n\t\t\t\te.printStackTrace();\n\t\t\t} finally {\n\t\t\t\tif (ip != null) {\n\t\t\t\t\ttry {\n\t\t\t\t\t\tip.close();\n\t\t\t\t\t} catch (IOException e) {\n\t\t\t\t\t\t// TODO Auto-generated catch block\n\t\t\t\t\t\te.printStackTrace();\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\n\t\t}\n\n\t}\n\n\tpublic void getProperty(String element) {\n\t\tgetProp().get(\"element\").toString().trim();\n\t}\n\n\tpublic Properties getProp() {\n\t\treturn prop;\n\t}\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/property/PropertyFile.java b/src/main/java/property/PropertyFile.java
+--- a/src/main/java/property/PropertyFile.java	(revision cf552da88453699fbcef77c81731050a7b46b9ae)
++++ b/src/main/java/property/PropertyFile.java	(date 1730197160223)
+@@ -17,7 +17,14 @@
+ 	String prodEnvironment = "prod";
+ 	String devEnvironment = "dev";
+ 
++
+ 	public PropertyFile() {
++
++		// Debugging statement
++		System.out.println("Environment: " + environment); // Add this line here
++
++
++
+ 		if (environment.equals(qaEnvironment)) {
+ 			FileInputStream ip = null;
+ 			try {
+Index: src/main/java/property/PropertyResources.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package property;\n\nimport java.io.FileNotFoundException;\nimport java.io.IOException;\nimport java.io.InputStream;\nimport java.util.Properties;\n\npublic class PropertyResources {\n\tprivate String PROPERTY_CONFIG_PROPERTIES = \"/configRead.properties\";\n\tprivate Properties prop;\n\n\tpublic PropertyResources() {\n\t\ttry {\n\t\t\tprop = new Properties();\n\t\t\tInputStream ip = PropertyResources.class.getResourceAsStream(PROPERTY_CONFIG_PROPERTIES);\n\t\t\tprop.load(ip);\n\t\t} catch (FileNotFoundException e) {\n\t\t\te.printStackTrace();\n\t\t} catch (IOException e) {\n\t\t\te.printStackTrace();\n\t\t}\n\n\t}\n\n\tpublic void getProperty(String element) {\n\t\tgetProp().get(\"element\").toString().trim();\n\t}\n\n\tpublic Properties getProp() {\n\t\treturn prop;\n\t}\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/property/PropertyResources.java b/src/main/java/property/PropertyResources.java
+--- a/src/main/java/property/PropertyResources.java	(revision cf552da88453699fbcef77c81731050a7b46b9ae)
++++ b/src/main/java/property/PropertyResources.java	(date 1730196941167)
+@@ -12,8 +12,12 @@
+ 	public PropertyResources() {
+ 		try {
+ 			prop = new Properties();
++
+ 			InputStream ip = PropertyResources.class.getResourceAsStream(PROPERTY_CONFIG_PROPERTIES);
++			System.out.println("prop---->"+ip);
+ 			prop.load(ip);
++
++			System.out.println(prop);
+ 		} catch (FileNotFoundException e) {
+ 			e.printStackTrace();
+ 		} catch (IOException e) {
+Index: configRead.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>environment = ${environment}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/configRead.properties b/configRead.properties
+--- a/configRead.properties	(revision cf552da88453699fbcef77c81731050a7b46b9ae)
++++ b/configRead.properties	(date 1730197257397)
+@@ -1,1 +1,1 @@
+-environment = ${environment}
+\ No newline at end of file
++environment=qa
+\ No newline at end of file

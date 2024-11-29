@@ -1,0 +1,211 @@
+Index: src/test/java/testcases/customer/creation/KYCTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package testcases.customer.creation;\n\nimport org.testng.annotations.Test;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\nimport org.json.simple.JSONObject;\nimport org.openqa.selenium.Alert;\nimport org.openqa.selenium.By;\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.chrome.ChromeOptions;\nimport org.openqa.selenium.support.ui.WebDriverWait;\nimport org.testng.Assert;\nimport org.testng.annotations.BeforeMethod;\nimport org.testng.annotations.DataProvider;\nimport org.testng.annotations.Test;\n\nimport com.aventstack.extentreports.ExtentReports;\nimport com.aventstack.extentreports.ExtentTest;\nimport com.aventstack.extentreports.Status;\n\nimport driver.BrowserFactory;\nimport excel.ExcelRead;\nimport listeners.ScreenshotListener;\nimport pages.customer.creation.KYCPage;\nimport property.PropertyFile;\nimport utility.BaseFile;\n\npublic class KYCTest extends BaseFile {\n\n\tprivate static final String TESTCASES_SHEET = \"swarnimCustomerKycFile\";\n\tprivate static final String SHEET_NAME = \"swarnimCustomerKycsheet\";\n\tprivate ExtentReports extent;\n\tprivate WebDriver driver;\n\tprivate KYCPage kycPage;\n\tprivate ExtentTest test;\n\tprivate int rownum;\n\tprivate Map<String, Object>[][] empdata;\n\tpublic WebDriverWait wait;\n\n\tPropertyFile propReader = new PropertyFile();\n\tBrowserFactory browserFactory = new BrowserFactory();\n\n\t// This method is calling driver and extent report.\n\t@BeforeMethod\n\tprivate void navigateToBaseURL() throws Exception {\n\t\t\n\t\t\n\t\tdriver = BaseFile.driver;\n\t\tkycPage = new KYCPage(driver, 5);\n\t\t\n\t\textent = extentBase;\n\t\tScreenshotListener.setDriver(driver);\n\n\t}\n\t@Test(priority = 1)\n\tpublic void swarnimKyc() throws InterruptedException {\n\t\tdriver.get(\"https://swarnim-uat.capriglobal.in/customer-creation\");\n\t\tkycPage.enterValue(\"256374354567\",kycPage.aadharfeild);\n\t\tkycPage.Buttonclick(kycPage.sendotp);\n\t\tkycPage.Buttonclick(kycPage.crossbutton);\n\t    kycPage.Buttonclick(kycPage.biomatricsradioButton);\n\t    Thread.sleep(2000);\n\t\tkycPage.Buttonclick(kycPage.crossbutton);\n\t\tThread.sleep(500);\n\t\tkycPage.Buttonclick(kycPage.crossbutton);\n\t\t\n\t\ttest = extent.createTest(\"Validate if offline button is enable after biometric faliure\");\n\t\t Assert.assertTrue(kycPage.offlineradioButton.isDisplayed() && kycPage.offlineradioButton.isEnabled());\n\t\t test.log(Status.PASS, \"Successfully offile button is enable\");\n\n\t\tkycPage.Buttonclick(kycPage.offlineradioButton);\n\n\t\t\n\t\t\n\t}\n\t\n\n\t// This method is used to read from excel.\n\n\t@DataProvider(name = \"KycPageDataProvider\")\n\tprivate Map<String, Object>[][] callTestDataFromExcel() throws Exception {\n\t\tString testDataSheet = propReader.getProp().get(SHEET_NAME).toString().trim();\n\t\tString filePath = System.getProperty(\"user.dir\") + propReader.getProp().get(TESTCASES_SHEET).toString().trim();\n\n\t\t{\n\t\t\tList<Map<String, Object>> dataList = ExcelRead.getExcelData(filePath, testDataSheet);\n\t\t\trownum = dataList.size();\n\t\t\tempdata = (Map<String, Object>[][]) new HashMap[rownum][1];\n\t\t\tfor (int i = 0; i < rownum; i++) {\n\t\t\t\tempdata[i][0] = dataList.get(i);\n\t\t\t}\n\t\t\treturn (empdata);\n\t\t}\n\t}\n\n\t@Test(dataProvider = \"KycPageDataProvider\",priority = 2)\n\tprivate void swarnimKYCPage(Map<String, Object> fetchData) throws InterruptedException {\n\n\t\tif (fetchData.entrySet() != null) {\n\t\t\tfor (Map.Entry<String, Object> entry : fetchData.entrySet()) {\n\n\t\t\t\tString testScenarioRequest = null;\n\t\t\t\tString testId = null;\n\t\t\t    String aadharno= null;\n\t\t\t    String firstName = null;\n\t\t\t\tString lastName= null;\n\t\t\t    String prefix= null;\n\t\t\t    String addressOne=null;\n\t\t\t    String addressTwo=null;\n\t\t\t    String pinCode=null;\n\t\t\t    String year=null;\n\t\t\t    String month=null;\n\t\t\t    String date=null;\n\t\t\t    String idProof=null;\n\t\t\t    int monthval=0;\n\n\t\t\t\ttry {\n\t\t\t\t\tJSONObject testData = (JSONObject) entry.getValue();\n\t\t\t\t\ttestScenarioRequest = new String((String) testData.get(\"testSenario\"));\n\t\t\t\t\ttestId = new String((String) testData.get(\"testID\")).toString();\n\t\t\t\t\taadharno= new String((String) testData.get(\"aadharno\")).toString();\n\t\t\t\t\tfirstName = new String((String) testData.get(\"firstName\"));\n\t\t\t\t\tlastName= new String((String) testData.get(\"lastName\"));\n\t\t\t\t\tprefix = new String((String) testData.get(\"prefix\")).toString();\n\t\t\t\t\taddressOne= new String((String) testData.get(\"addressOne\")).toString();\n\t\t\t\t\taddressTwo = new String((String) testData.get(\"addressTwo\"));\n\t\t\t\t\tpinCode = new String((String) testData.get(\"pinCode\")).toString();\n\t\t\t\t\tyear= new String((String) testData.get(\"dobYear\")).toString();\n\t\t\t\t\tmonth = new String((String) testData.get(\"dobMonth\"));\n\t\t\t\t\tdate = new String((String) testData.get(\"dobDay\")).toString();\n\t\t\t\t\tidProof= new String((String) testData.get(\"Idproof\")).toString();\n\n\t\t\t\t\t\n\n\t\t\t\t} catch (Exception e1) {\n\t\t\t\t\t// TODO Auto-generated catch block\n\t\t\t\t\te1.printStackTrace();\n\t\t\t\t}\n\n\n\n\t\t\t\ttest = extent.createTest(testScenarioRequest);\n\n\t\t\t\ttry {\n\t\t\t\t\t monthval=Integer.valueOf(month);\n\t\t\t\t\tkycPage.enterValue(aadharno,kycPage.aadharfeild);\n\t\t\t\t\tkycPage.Buttonclick(kycPage.verifyAaadhar);\n\t\t\t\t\tkycPage.Buttonclick(kycPage.aadharImagebox);\n\t\t\t\t\tfor(int i=0;i<3;i++) {\n\t\t\t\t\tThread.sleep(1500);\n\t\t\t\t\t\n\t\t\t\t\t\tkycPage.Buttonclick(kycPage.frontImagebutton);\n\t\t\t\t\t\t\n\t\t\t\t\t}\n\t\t\t\t\tfor(int i=0;i<3;i++) {\n\t\t\t\t\t\tThread.sleep(1500);\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tkycPage.Buttonclick(kycPage.backImagebutton);\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t}\t\n\t\t\t\t\tkycPage.Buttonclick(kycPage.frontimageconfirm);\n\t\t\t\t\tkycPage.Buttonclick(kycPage.backImageconfirm);\n\t\t\t\t\tkycPage.Buttonclick(kycPage.saveImageconfirm);\n\t\t\t\t\tkycPage.Buttonclick(kycPage.aadharOSVyes);\n\t\t\t\t\tkycPage.enterValue(firstName,kycPage.firstName);\n\t\t\t\t\t\n\t\t\t\t\tkycPage.enterValue(lastName,kycPage.lastName);\n\t\t\t\t\tkycPage.Buttonclick(kycPage.calender);\n\t\t\t\t\t//Thread.sleep(500);\n\t\t\t\t\tkycPage.Buttonclick(kycPage.yearDropdown);\n\t\t\t\t\t\n\t\t\t\t\tThread.sleep(200);\n\t\t\t      \t \n\t\t\t\t      driver.findElement(By.xpath(\"//button[text()='\"+year+\"']\")).click();\n\t\t\t\t      \t Thread.sleep(200);\n\t\t\t\t      \t for(int i=1;i<monthval;i++) {\n\t\t\t\t      \t\tkycPage.Buttonclick(kycPage.monthSelector);\n\t\t\t\t      \t\t \n\t\t\t\t      \t }\n\t\t\t\t      \t Thread.sleep(500);\n\t\t\t\t      \t driver.findElement(By.xpath(\"//button[text()='\"+date+\"']\")).click();\n\t\t\t\t      \t Thread.sleep(1000);\n\t\t\t\t      kycPage.enterValue(addressOne,kycPage.addressOne);\n\t\t\t\t      \tkycPage.enterValue(addressTwo,kycPage.addressTwo);\n\t\t\t\t      \tkycPage.enterValue(pinCode,kycPage.pinCode);\n\t\t\t\t      \tkycPage.Buttonclick(kycPage.prefix);\n\t\t\t\t      \tThread.sleep(200);\n\t\t\t\t      \t driver.findElement(By.cssSelector(\"[data-value='\" + prefix + \"']\")).click();\n\t\t\t\t      \t kycPage.Buttonclick(kycPage.panDetailno);\n\t\t\t\t      \tkycPage.Buttonclick(kycPage.Idprrof);\n\t\t\t\t      \tThread.sleep(200);\n\t\t\t\t      \t driver.findElement(By.cssSelector(\"[data-value='\" + idProof + \"']\")).click();\n\t\t\t\t      \t Thread.sleep(500);\n\t\t\t\t     \tkycPage.Buttonclick(kycPage.IdproofOsvyes);\n\t\t\t\t      \tkycPage.Buttonclick(kycPage.isAddresssameasaadhaarYes);\n\t\t\t\t      \t Thread.sleep(500);\n\t\t\t\t      \tkycPage.Buttonclick(kycPage.isAddressosvyes);\n\t\t\t\t      \tkycPage.Buttonclick(kycPage.currentSameYes);\n\t\t\t\t \n\t\t\t\t    \tkycPage.Buttonclick(kycPage.customerImage);\n\t\t\t\t     \tThread.sleep(3000);\n\t\t\t\t    \tkycPage.waitForElementToBeClickable(kycPage.customerTakeimagebtn);\n\t\t\t\t    \tkycPage.Buttonclick(kycPage.customerTakeimagebtn);\n\t\t\t\t    \tkycPage.waitForAlertAndAccept();\n\t\t\t\t\n\t\t\t\t      \tkycPage.waitForElementToBeClickable(kycPage.customerImageconfirm);\n\t\t\t\t      \tkycPage.Buttonclick(kycPage.customerImageconfirm);\n\t\t\t\t      \tkycPage.Buttonclick(kycPage.next);\n\t\t\t\t      \tThread.sleep(1000);\n\t\t\t\t      \t\n\t\t\t\t      \tAssert.assertEquals(kycPage.isElementdisplayed(kycPage.noOfyear), true);\n\t\t\t\t\t\t\n\t\t\t\t\t\ttest.log(Status.PASS, \"Successfully completed the customer KYC journey \");\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\n\t\t\t\t} catch (org.openqa.selenium.NoSuchElementException e) {\n\t\t\t\t\t// Capture the NoSuchElementException message\n\t\t\t\t\ttest.log(Status.SKIP, e.getMessage());\n\t\t\t\t\tAssert.fail(\"Deliberate failure to capture screenshot\");\n\n\t\t\t\t} catch (AssertionError e) {\n\t\t\t\t\t// Capture the exception message\n\t\t\t\t\ttest.log(Status.FAIL, e.getMessage());\n\t\t\t\t\tAssert.fail(\"Deliberate failure to capture screenshot\");\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t}\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/testcases/customer/creation/KYCTest.java b/src/test/java/testcases/customer/creation/KYCTest.java
+--- a/src/test/java/testcases/customer/creation/KYCTest.java	(revision cf552da88453699fbcef77c81731050a7b46b9ae)
++++ b/src/test/java/testcases/customer/creation/KYCTest.java	(date 1730204237290)
+@@ -56,7 +56,7 @@
+ 	}
+ 	@Test(priority = 1)
+ 	public void swarnimKyc() throws InterruptedException {
+-		driver.get("https://swarnim-uat.capriglobal.in/customer-creation");
++		driver.get("https://cggl-dev.capriglobal.in/dashboard");
+ 		kycPage.enterValue("256374354567",kycPage.aadharfeild);
+ 		kycPage.Buttonclick(kycPage.sendotp);
+ 		kycPage.Buttonclick(kycPage.crossbutton);
+Index: configQa.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>url = https://swarnim-uat.capriglobal.in/\n\ngeckoDriver = File/geckodriver\n\nswarnimLoginFile = /File/login.xlsx\n\nswarnimLoginSheet = login\nemailid= ddtest@capriglobal.in\nPassward= 43U1h&mz!1Aw\n\nswarnimCustomerDeupeFile=/File/customerDedupe.xlsx\nswarnimCustomerDedupeSheet= Sheet1\nswarnimCustomerKycFile=/File/kycPage.xlsx\nswarnimCustomerKycsheet= Sheet1\nCustomerpersonalinformationFile=/File/customerPersonalinformation.xlsx\nCustomeremploymentinformationFile=/File/customerEmployment.xlsx\nCustomernomineeFile=/File/customerNominee.xlsx\nCustomersendOtpfile=/File/SendOTP.xlsx
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/configQa.properties b/configQa.properties
+--- a/configQa.properties	(revision cf552da88453699fbcef77c81731050a7b46b9ae)
++++ b/configQa.properties	(date 1730204107961)
+@@ -1,4 +1,4 @@
+-url = https://swarnim-uat.capriglobal.in/
++url = https://cggl-dev.capriglobal.in/dashboard
+ 
+ geckoDriver = File/geckodriver
+ 
+@@ -15,4 +15,6 @@
+ CustomerpersonalinformationFile=/File/customerPersonalinformation.xlsx
+ CustomeremploymentinformationFile=/File/customerEmployment.xlsx
+ CustomernomineeFile=/File/customerNominee.xlsx
+-CustomersendOtpfile=/File/SendOTP.xlsx
+\ No newline at end of file
++CustomersendOtpfile=/File/SendOTP.xlsx
++
++
+Index: src/test/java/pages/login/LoginPage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package pages.login;\n\nimport java.util.ArrayList;\nimport java.util.List;\n\nimport org.openqa.selenium.Alert;\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.WebElement;\nimport org.openqa.selenium.support.FindBy;\nimport org.openqa.selenium.support.PageFactory;\nimport org.openqa.selenium.support.ui.WebDriverWait;\n\nimport common.CommonKeyWords;\nimport property.PropertyFile;\n\npublic class LoginPage extends CommonKeyWords {\n\n\tpublic WebDriver driver;\n\tpublic WebDriverWait wait;\n\tArrayList<String> credData = new ArrayList<String>();\n\tPropertyFile propReader = new PropertyFile();\n\tprivate static final String PAGE_URL = \"url\";\n\n\tpublic LoginPage(WebDriver driver, long timeoutInSeconds) {\n\t\tsuper(driver, timeoutInSeconds);\n\t\tthis.driver = driver;\n\t\tPageFactory.initElements(driver, this);\n\t}\n\n\t@FindBy(xpath = \"//*[@id=\\\"undefined-basic\\\"]\")\n\tpublic WebElement EmailID;\n\n\t@FindBy(xpath = \"//*[@id=\\\"filled-adornment-password\\\"]\\n\" + \"\")\n\tpublic WebElement Pass;\n\n\t@FindBy(xpath = \"//*[contains(text(),'Login')]\")\n\tpublic WebElement Login;\n\n\t@FindBy(xpath = \"/html/body/div[1]/div/div[2]/div/div/div/form/div[1]/div[1]/div/p\\n\" + \"\")\n\tpublic WebElement EmailValidation;\n\n\t@FindBy(xpath = \"/html/body/div[1]/div/div[2]/div/div/form/div[3]/div/button\\n\" + \"\")\n\tpublic WebElement branchElement;\n\n\t@FindBy(xpath = \"/html/body/div[1]/div/div[2]/div/div/div/form/div[1]/div[2]/div/p\")\n\tpublic WebElement passwordElementValidation;\n\n\t@FindBy(xpath = \"/html/body/div[1]/div/div[2]/div/div/div/form/div[2]/div[2]/div/div[2]\\n\" + \"\")\n\tpublic WebElement invaidCredElementValidation;\n\n\tpublic void openURL() throws Exception {\n\t\tdriver.navigate().to(propReader.getProp().get(PAGE_URL).toString().trim());\n\t}\n\n\tpublic void clickloginButton() {\n\t\tclick(Login);\n\t}\n\n\tpublic String validatePopUPInvalidCredential() {\n\t\tAlert alert = driver.switchTo().alert();\n\t\t// Get the text of the alert\n\t\tString alertText = alert.getText();\n\t\treturn alertText;\n\t}\n\n\tpublic String loginCredential(String Email) {\n\t\tenterText(EmailID, Email);\n\t\treturn Email;\n\t}\n\n\tpublic String passWord(String Password) {\n\t\tenterText(Pass, Password);\n\t\treturn Password;\n\t}\n\tpublic String gettext(WebElement element) {\n\t\treturn getText(element);\n\t}\n\tpublic boolean isElementdisplayed(WebElement element) {\n\t\treturn isDisplayed(element);\n\t}\n\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/pages/login/LoginPage.java b/src/test/java/pages/login/LoginPage.java
+--- a/src/test/java/pages/login/LoginPage.java	(revision cf552da88453699fbcef77c81731050a7b46b9ae)
++++ b/src/test/java/pages/login/LoginPage.java	(date 1730199224980)
+@@ -50,6 +50,8 @@
+ 
+ 	public void openURL() throws Exception {
+ 		driver.navigate().to(propReader.getProp().get(PAGE_URL).toString().trim());
++
++		System.out.println("");
+ 	}
+ 
+ 	public void clickloginButton() {
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(date 1728635897911)
++++ b/.idea/compiler.xml	(date 1728635897911)
+@@ -0,0 +1,13 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <annotationProcessing>
++      <profile name="Maven default annotation processors profile" enabled="true">
++        <sourceOutputDir name="target/generated-sources/annotations" />
++        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
++        <outputRelativeToContentRoot value="true" />
++        <module name="swarnim-web-automation" />
++      </profile>
++    </annotationProcessing>
++  </component>
++</project>
+\ No newline at end of file
+Index: src/test/java/listeners/ScreenshotListener.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package listeners;\n\nimport org.testng.ITestContext;\nimport org.testng.ITestListener;\nimport org.testng.ITestResult;\nimport org.openqa.selenium.OutputType;\nimport org.openqa.selenium.TakesScreenshot;\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.io.FileHandler;\n\nimport java.io.File;\nimport java.io.IOException;\nimport java.text.SimpleDateFormat;\nimport java.util.Date;\n\npublic class ScreenshotListener implements ITestListener {\n\n\tprivate static WebDriver driver;\n\n\t// No-argument constructor\n\tpublic ScreenshotListener() {\n\t}\n\n\t// Setter method to provide the WebDriver instance\n\tpublic static void setDriver(WebDriver driver) {\n\t\tScreenshotListener.driver = driver;\n\t}\n\n\t@Override\n\tpublic void onTestFailure(ITestResult result) {\n\t\tif (driver != null) {\n\t\t\t// Take screenshot on test failure\n\t\t\tFile srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);\n\t\t\tString timeStamp = new SimpleDateFormat(\"yyyy.MM.dd.HH.mm.ss\").format(new Date());\n\t\t\tString fileName = result.getName() + \"_\" + timeStamp + \".png\";\n\n\t\t\ttry {\n\t\t\t\tFileHandler.copy(srcFile, new File(\"Screenshots/\" + fileName));\n\t\t\t\tSystem.out.println(\"Screenshot saved as: \" + fileName);\n\t\t\t} catch (IOException e) {\n\t\t\t\te.printStackTrace();\n\t\t\t}\n\t\t}\n\t}\n\n\t@Override\n\tpublic void onTestStart(ITestResult result) {\n\t}\n\n\t@Override\n\tpublic void onTestSuccess(ITestResult result) {\n\t}\n\n\t@Override\n\tpublic void onTestSkipped(ITestResult result) {\n\t}\n\n\t@Override\n\tpublic void onTestFailedButWithinSuccessPercentage(ITestResult result) {\n\t}\n\n\t@Override\n\tpublic void onTestFailedWithTimeout(ITestResult result) {\n\t}\n\n\t@Override\n\tpublic void onStart(ITestContext context) {\n\t}\n\n\t@Override\n\tpublic void onFinish(ITestContext context) {\n\t}\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/listeners/ScreenshotListener.java b/src/test/java/listeners/ScreenshotListener.java
+--- a/src/test/java/listeners/ScreenshotListener.java	(revision cf552da88453699fbcef77c81731050a7b46b9ae)
++++ b/src/test/java/listeners/ScreenshotListener.java	(date 1728648614861)
+@@ -35,7 +35,7 @@
+ 			String fileName = result.getName() + "_" + timeStamp + ".png";
+ 
+ 			try {
+-				FileHandler.copy(srcFile, new File("Screenshots/" + fileName));
++				FileHandler.copy(srcFile, new File("/Users/deepak.ahlawat/Desktop/Screenshot_Selenium//" + fileName));
+ 				System.out.println("Screenshot saved as: " + fileName);
+ 			} catch (IOException e) {
+ 				e.printStackTrace();
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1728635897913)
++++ b/.idea/vcs.xml	(date 1728635897913)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1728635897912)
++++ b/.idea/misc.xml	(date 1728635897912)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="MavenProjectsManager">
++    <option name="originalFiles">
++      <list>
++        <option value="$PROJECT_DIR$/pom.xml" />
++      </list>
++    </option>
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
++</project>
+\ No newline at end of file
+Index: .idea/jarRepositories.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/jarRepositories.xml b/.idea/jarRepositories.xml
+new file mode 100644
+--- /dev/null	(date 1728635897912)
++++ b/.idea/jarRepositories.xml	(date 1728635897912)
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="RemoteRepositoriesConfiguration">
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Central Repository" />
++      <option name="url" value="https://repo.maven.apache.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="central" />
++      <option name="name" value="Maven Central repository" />
++      <option name="url" value="https://repo1.maven.org/maven2" />
++    </remote-repository>
++    <remote-repository>
++      <option name="id" value="jboss.community" />
++      <option name="name" value="JBoss Community repository" />
++      <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
++    </remote-repository>
++  </component>
++</project>
+\ No newline at end of file
+Index: src/test/java/testcases/login/LoginTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package testcases.login;\n\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\nimport org.json.simple.JSONObject;\nimport org.openqa.selenium.WebDriver;\nimport org.openqa.selenium.support.ui.WebDriverWait;\nimport org.testng.Assert;\nimport org.testng.annotations.BeforeMethod;\nimport org.testng.annotations.DataProvider;\nimport org.testng.annotations.Test;\n\nimport com.aventstack.extentreports.ExtentReports;\nimport com.aventstack.extentreports.ExtentTest;\nimport com.aventstack.extentreports.Status;\n\nimport driver.BrowserFactory;\nimport excel.ExcelRead;\nimport listeners.ScreenshotListener;\nimport pages.login.LoginPage;\nimport property.PropertyFile;\nimport utility.BaseFile;\n\npublic class LoginTest extends BaseFile {\n\n\tprivate static final String TESTCASES_SHEET = \"swarnimLoginFile\";\n\tprivate static final String SHEET_NAME = \"swarnimLoginSheet\";\n\tprivate ExtentReports extent;\n\tprivate WebDriver driver;\n\tprivate LoginPage loginPage;\n\tprivate ExtentTest test;\n\tprivate int rownum;\n\tprivate Map<String, Object>[][] empdata;\n\tpublic WebDriverWait wait;\n\n\tPropertyFile propReader = new PropertyFile();\n\tBrowserFactory browserFactory = new BrowserFactory();\n\n\t// This method is calling driver and extent report.\n\t@BeforeMethod\n\tprivate void navigateToBaseURL() throws Exception {\n\t\tdriver = BaseFile.driver;\n\t\tloginPage = new LoginPage(driver, 5);\n\t\tloginPage.openURL();\n\t\textent = extentBase;\n\t\tScreenshotListener.setDriver(driver);\n\n\t}\n\n\t// This method is used to read from excel.\n\n\t@DataProvider(name = \"loginPageDataProvider\")\n\tprivate Map<String, Object>[][] callTestDataFromExcel() throws Exception {\n\t\tString testDataSheet = propReader.getProp().get(SHEET_NAME).toString().trim();\n\t\tString filePath = System.getProperty(\"user.dir\") + propReader.getProp().get(TESTCASES_SHEET).toString().trim();\n\n\t\t{\n\t\t\tList<Map<String, Object>> dataList = ExcelRead.getExcelData(filePath, testDataSheet);\n\t\t\trownum = dataList.size();\n\t\t\tempdata = (Map<String, Object>[][]) new HashMap[rownum][1];\n\t\t\tfor (int i = 0; i < rownum; i++) {\n\t\t\t\tempdata[i][0] = dataList.get(i);\n\t\t\t}\n\t\t\treturn (empdata);\n\t\t}\n\t}\n\n\t@Test(dataProvider = \"loginPageDataProvider\")\n\tprivate void swarnimLoginPage(Map<String, Object> fetchData) throws InterruptedException {\n\n\t\tif (fetchData.entrySet() != null) {\n\t\t\tfor (Map.Entry<String, Object> entry : fetchData.entrySet()) {\n\n\t\t\t\tString testScenarioRequest = null;\n\t\t\t\tString emailCred = null;\n\t\t\t\tString passCred = null;\n\t\t\t\tString messageData = null;\n\t\t\t\tboolean status = false;\n\n\t\t\t\ttry {\n\t\t\t\t\tJSONObject testData = (JSONObject) entry.getValue();\n\t\t\t\t\ttestScenarioRequest = new String((String) testData.get(\"testScenario\"));\n\t\t\t\t\temailCred = new String((String) testData.get(\"email\")).toString();\n\t\t\t\t\tpassCred = new String((String) testData.get(\"pass\")).toString();\n\t\t\t\t\tmessageData = new String((String) testData.get(\"message\"));\n\t\t\t\t\tString resultValue = testData.get(\"result\").toString();\n\t\t\t\t\tstatus = Boolean.parseBoolean(resultValue);\n\n\t\t\t\t} catch (Exception e1) {\n\t\t\t\t\t// TODO Auto-generated catch block\n\t\t\t\t\te1.printStackTrace();\n\t\t\t\t}\n\n\n\n\t\t\t\ttest = extent.createTest(testScenarioRequest);\n\n\t\t\t\ttry {\n\n\t\t\t\t\t// Validate the login with valid cred\n\t\t\t\t\tif (status == true) {\n\t\t\t\t\t\tloginPage.loginCredential(emailCred);\n\t\t\t\t\t\tloginPage.passWord(passCred);\n\t\t\t\t\t\tloginPage.clickloginButton();\n\t\t\t\t\t\tAssert.assertEquals(loginPage.isElementdisplayed(loginPage.branchElement), true);\n\t\t\t\t\t\ttest.log(Status.PASS, \"User is able to login successfully: \");\n\t\t\t\t\t}\n\n\t\t\t\t\t// Validate the login with empty email ID\n\t\t\t\t\tif (emailCred.isEmpty() && status == false) {\n\t\t\t\t\t\tloginPage.passWord(passCred);\n\t\t\t\t\t\tloginPage.clickloginButton();\n\t\t\t\t\t\tAssert.assertEquals(loginPage.gettext(loginPage.EmailValidation), messageData);\n\t\t\t\t\t\ttest.log(Status.PASS, \"Validation message validated successfully for empty email\");\n\t\t\t\t\t}\n\n\t\t\t\t\t// Validate the login with empty Pass\n\t\t\t\t\tif (passCred.isEmpty() && status == false) {\n\t\t\t\t\t\tloginPage.loginCredential(emailCred);\n\t\t\t\t\t\tloginPage.clickloginButton();\n\t\t\t\t\t\tAssert.assertEquals(loginPage.gettext(loginPage.passwordElementValidation), messageData);\n\t\t\t\t\t\ttest.log(Status.PASS, \"Validation message validated successfully for empty Password\");\n\t\t\t\t\t}\n\n\t\t\t\t\t// Validate the login with invalid email and pass\n\t\t\t\t\tif (!passCred.isEmpty() && !emailCred.isEmpty() && status == false) {\n\t\t\t\t\t\tloginPage.loginCredential(emailCred);\n\t\t\t\t\t\tloginPage.passWord(passCred);\n\t\t\t\t\t\tloginPage.clickloginButton();\n\t\t\t\t\t\tAssert.assertEquals(loginPage.gettext(loginPage.invaidCredElementValidation), messageData);\n\t\t\t\t\t\ttest.log(Status.PASS, \"Validation message validated successfully for invalid email and pass\");\n\t\t\t\t\t}\n\n\t\t\t\t} catch (org.openqa.selenium.NoSuchElementException e) {\n\t\t\t\t\t// Capture the NoSuchElementException message\n\t\t\t\t\ttest.log(Status.SKIP, e.getMessage());\n\t\t\t\t\tAssert.fail(\"Deliberate failure to capture screenshot\");\n\n\t\t\t\t} catch (AssertionError e) {\n\t\t\t\t\t// Capture the exception message\n\t\t\t\t\ttest.log(Status.FAIL, e.getMessage());\n\t\t\t\t\tAssert.fail(\"Deliberate failure to capture screenshot\");\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t}\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/testcases/login/LoginTest.java b/src/test/java/testcases/login/LoginTest.java
+--- a/src/test/java/testcases/login/LoginTest.java	(revision cf552da88453699fbcef77c81731050a7b46b9ae)
++++ b/src/test/java/testcases/login/LoginTest.java	(date 1729837806652)
+@@ -53,6 +53,10 @@
+ 
+ 	@DataProvider(name = "loginPageDataProvider")
+ 	private Map<String, Object>[][] callTestDataFromExcel() throws Exception {
++
++		System.out.println(propReader.getProp());
++
++
+ 		String testDataSheet = propReader.getProp().get(SHEET_NAME).toString().trim();
+ 		String filePath = System.getProperty("user.dir") + propReader.getProp().get(TESTCASES_SHEET).toString().trim();
+ 
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1728635863198)
++++ b/.idea/.gitignore	(date 1728635863198)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
